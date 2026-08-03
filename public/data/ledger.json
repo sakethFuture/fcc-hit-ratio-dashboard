@@ -1,0 +1,4346 @@
+{
+  "generatedAt": "2026-08-03T11:43:38.257Z",
+  "statementPeriod": "01/04/2026 to 31/03/2027",
+  "clientCode": "1333417",
+  "scrips": [
+    {
+      "scripSymbol": "ADVENZYMES",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "ADVENZYMES__T1",
+          "scripSymbol": "ADVENZYMES",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-28",
+          "entryPrice": 344.18,
+          "entryQty": 730,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-22",
+              "qty": 700,
+              "price": 379.17
+            },
+            {
+              "date": "2026-06-29",
+              "qty": 30,
+              "price": 337.56
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-29",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 62,
+          "realizedPnl": 24294.40000000001,
+          "unrealizedPnl": 0,
+          "peakMovePct": 13.92294729502006,
+          "troughMovePct": -6.70579348015573,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "ADVENZYMES__T2",
+          "scripSymbol": "ADVENZYMES",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-05-07",
+          "entryPrice": 362.58,
+          "entryQty": 690,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-29",
+              "qty": 590,
+              "price": 337.56
+            },
+            {
+              "date": "2026-06-30",
+              "qty": 100,
+              "price": 318.47
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-30",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 54,
+          "realizedPnl": -19172.799999999985,
+          "unrealizedPnl": 0,
+          "peakMovePct": 8.141651497600533,
+          "troughMovePct": -15.19113023332781,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "ALLDIGI",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "ALLDIGI__T1",
+          "scripSymbol": "ALLDIGI",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-04",
+          "entryPrice": 830.87,
+          "entryQty": 241,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-17",
+              "qty": 241,
+              "price": 808.63
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-17",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 13,
+          "realizedPnl": -5359.840000000002,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.43568789341292824,
+          "troughMovePct": -3.396439876274271,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "AMBIKCO",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "AMBIKCO__T1",
+          "scripSymbol": "AMBIKCO",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-25",
+          "entryPrice": 1740.44,
+          "entryQty": 172,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-13",
+              "qty": 172,
+              "price": 1729.71
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-13",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 18,
+          "realizedPnl": -1845.5600000000031,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.2272758612764445,
+          "troughMovePct": -2.7200018386155267,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "ANUP",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "ANUP__T1",
+          "scripSymbol": "ANUP",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-17",
+          "entryPrice": 2151.85,
+          "entryQty": 102,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-06",
+              "qty": 102,
+              "price": 2270.78
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-06",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 19,
+          "realizedPnl": 12130.86000000003,
+          "unrealizedPnl": 0,
+          "peakMovePct": 8.966703069451887,
+          "troughMovePct": -0.9038780584148531,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "APARINDS",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "APARINDS__T1",
+          "scripSymbol": "APARINDS",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-04",
+          "entryPrice": 13743.18,
+          "entryQty": 15,
+          "remainingQty": 7,
+          "exitEvents": [
+            {
+              "date": "2026-06-24",
+              "qty": 8,
+              "price": 16677.95
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-06-15",
+          "daysToHit": 11,
+          "currentLtp": 14746,
+          "currentMovePct": 7.296855604015962,
+          "pctStillNeeded": 7.179282517292829,
+          "daysHeld": 60,
+          "realizedPnl": 23478.160000000003,
+          "unrealizedPnl": 7019.739999999998,
+          "peakMovePct": 21.260145031935828,
+          "troughMovePct": -3.3993588092421145,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "APARINDS__T2",
+          "scripSymbol": "APARINDS",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-07-21",
+          "entryPrice": 13845.24,
+          "entryQty": 20,
+          "remainingQty": 20,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 14746,
+          "currentMovePct": 6.505918279495337,
+          "pctStillNeeded": 7.975220398752181,
+          "daysHeld": 13,
+          "realizedPnl": 0,
+          "unrealizedPnl": 18015.200000000004,
+          "peakMovePct": 6.505918279495337,
+          "troughMovePct": -3.0497123921289893,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "APCOTEXIND",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "APCOTEXIND__T1",
+          "scripSymbol": "APCOTEXIND",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-05",
+          "entryPrice": 410.27,
+          "entryQty": 570,
+          "remainingQty": 285,
+          "exitEvents": [
+            {
+              "date": "2026-05-08",
+              "qty": 285,
+              "price": 518.31
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-05-07",
+          "daysToHit": 2,
+          "currentLtp": 617.5999755859375,
+          "currentMovePct": 50.53500757694629,
+          "pctStillNeeded": -23.605809803930487,
+          "daysHeld": 90,
+          "realizedPnl": 30791.39999999999,
+          "unrealizedPnl": 59089.04304199219,
+          "peakMovePct": 66.13449679479369,
+          "troughMovePct": 1.0432154434884433,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "APCOTEXIND__T2",
+          "scripSymbol": "APCOTEXIND",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-06-09",
+          "entryPrice": 534.71,
+          "entryQty": 134,
+          "remainingQty": 134,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-07-29",
+          "daysToHit": 50,
+          "currentLtp": 617.5999755859375,
+          "currentMovePct": 15.501856255902723,
+          "pctStillNeeded": -0.43450059780063555,
+          "daysHeld": 55,
+          "realizedPnl": 0,
+          "unrealizedPnl": 11107.25672851562,
+          "peakMovePct": 27.470965570122118,
+          "troughMovePct": -7.155280432383915,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "APCOTEXIND__T3",
+          "scripSymbol": "APCOTEXIND",
+          "exchange": "NSE",
+          "label": "Tranche 3",
+          "entryDate": "2026-07-13",
+          "entryPrice": 519.29,
+          "entryQty": 180,
+          "remainingQty": 180,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-07-29",
+          "daysToHit": 16,
+          "currentLtp": 617.5999755859375,
+          "currentMovePct": 18.931613469532937,
+          "pctStillNeeded": -3.305776618039513,
+          "daysHeld": 21,
+          "realizedPnl": 0,
+          "unrealizedPnl": 17695.795605468757,
+          "peakMovePct": 31.256138188680715,
+          "troughMovePct": 0.011554237516619992,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "APCOTEXIND__T4",
+          "scripSymbol": "APCOTEXIND",
+          "exchange": "NSE",
+          "label": "Tranche 4",
+          "entryDate": "2026-07-23",
+          "entryPrice": 564.04,
+          "entryQty": 145,
+          "remainingQty": 145,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-07-29",
+          "daysToHit": 6,
+          "currentLtp": 617.5999755859375,
+          "currentMovePct": 9.49577611267598,
+          "pctStillNeeded": 5.026882390111509,
+          "daysHeld": 11,
+          "realizedPnl": 0,
+          "unrealizedPnl": 7766.196459960943,
+          "peakMovePct": 20.842493440181563,
+          "troughMovePct": -0.6098858237004401,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "ARFIN",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "ARFIN__T1",
+          "scripSymbol": "ARFIN",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-08",
+          "entryPrice": 86.67,
+          "entryQty": 1506,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-04-22",
+              "qty": 1123,
+              "price": 95.87
+            },
+            {
+              "date": "2026-06-01",
+              "qty": 383,
+              "price": 91.86
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-01",
+          "hitStatus": "HIT",
+          "hitDate": "2026-05-12",
+          "daysToHit": 34,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 54,
+          "realizedPnl": 12319.370000000003,
+          "unrealizedPnl": 0,
+          "peakMovePct": 15.11480327679704,
+          "troughMovePct": -0.507672781816082,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "ASIANTILES",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "ASIANTILES__T1",
+          "scripSymbol": "ASIANTILES",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-17",
+          "entryPrice": 74.92,
+          "entryQty": 2484,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-04-28",
+              "qty": 2484,
+              "price": 71.67
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-04-28",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 11,
+          "realizedPnl": -8073,
+          "unrealizedPnl": 0,
+          "peakMovePct": 3.470368392952472,
+          "troughMovePct": -1.0277629471436178,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "AVANTEL",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "AVANTEL__T1",
+          "scripSymbol": "AVANTEL",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-25",
+          "entryPrice": 167.96,
+          "entryQty": 3093,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-11",
+              "qty": 1546,
+              "price": 158.5
+            },
+            {
+              "date": "2026-06-15",
+              "qty": 1547,
+              "price": 169.33
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-15",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 21,
+          "realizedPnl": -12505.770000000006,
+          "unrealizedPnl": 0,
+          "peakMovePct": 7.614908311502733,
+          "troughMovePct": -6.4301024053346145,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "BANCOINDIA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "BANCOINDIA__T1",
+          "scripSymbol": "BANCOINDIA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-30",
+          "entryPrice": 680.15,
+          "entryQty": 445,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-13",
+              "qty": 445,
+              "price": 674.7
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-13",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 13,
+          "realizedPnl": -2425.2499999999695,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.315886201573191,
+          "troughMovePct": -3.021392339925011,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "BHARATSE",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "BHARATSE__T1",
+          "scripSymbol": "BHARATSE",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-15",
+          "entryPrice": 188.87,
+          "entryQty": 1148,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-30",
+              "qty": 1148,
+              "price": 187.46
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-30",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 15,
+          "realizedPnl": -1618.6799999999962,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.2918938952718895,
+          "troughMovePct": -3.3356276804151097,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "BORANA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "BORANA__T1",
+          "scripSymbol": "BORANA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-21",
+          "entryPrice": 330.06,
+          "entryQty": 920,
+          "remainingQty": 920,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 318.8500061035156,
+          "currentMovePct": -3.396350329177844,
+          "pctStillNeeded": 19.04312144713327,
+          "daysHeld": 13,
+          "realizedPnl": 0,
+          "unrealizedPnl": -10313.194384765628,
+          "peakMovePct": -0.5483851420953756,
+          "troughMovePct": -3.396352178391804,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "BORORENEW",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "BORORENEW__T1",
+          "scripSymbol": "BORORENEW",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-03",
+          "entryPrice": 546.82,
+          "entryQty": 85,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-15",
+              "qty": 85,
+              "price": 547.68
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-15",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 12,
+          "realizedPnl": 73.0999999999915,
+          "unrealizedPnl": 0,
+          "peakMovePct": 0.11521158699390188,
+          "troughMovePct": -6.047693939504784,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "BORORENEW__T2",
+          "scripSymbol": "BORORENEW",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-06-04",
+          "entryPrice": 536.28,
+          "entryQty": 300,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-15",
+              "qty": 300,
+              "price": 547.68
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-15",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 11,
+          "realizedPnl": 3419.999999999993,
+          "unrealizedPnl": 0,
+          "peakMovePct": 2.082867158946833,
+          "troughMovePct": -4.20116357126874,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "CERA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "CERA__T1",
+          "scripSymbol": "CERA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-09",
+          "entryPrice": 5819.76,
+          "entryQty": 35,
+          "remainingQty": 17,
+          "exitEvents": [
+            {
+              "date": "2026-07-07",
+              "qty": 18,
+              "price": 6437.08
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 6280.5,
+          "currentMovePct": 7.916821312219047,
+          "pctStillNeeded": 6.563553857176974,
+          "daysHeld": 55,
+          "realizedPnl": 11111.759999999995,
+          "unrealizedPnl": 7832.579999999996,
+          "peakMovePct": 14.46348303022804,
+          "troughMovePct": 0.2618664687203509,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "CHOICEIN",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "CHOICEIN__T1",
+          "scripSymbol": "CHOICEIN",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-30",
+          "entryPrice": 801.58,
+          "entryQty": 375,
+          "remainingQty": 375,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 828.0999755859375,
+          "currentMovePct": 3.308462734341866,
+          "pctStillNeeded": 11.317114741822243,
+          "daysHeld": 4,
+          "realizedPnl": 0,
+          "unrealizedPnl": 9944.990844726548,
+          "peakMovePct": 3.3084657800843242,
+          "troughMovePct": -0.3592904014571241,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "CONTROLPR",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "CONTROLPR__T1",
+          "scripSymbol": "CONTROLPR",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-17",
+          "entryPrice": 683.07,
+          "entryQty": 272,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-04-24",
+              "qty": 272,
+              "price": 645.85
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-04-24",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 7,
+          "realizedPnl": -10123.840000000007,
+          "unrealizedPnl": 0,
+          "peakMovePct": -1.4961863352218718,
+          "troughMovePct": -6.268757228395339,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "CORDSCABLE",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "CORDSCABLE__T1",
+          "scripSymbol": "CORDSCABLE",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-01",
+          "entryPrice": 211.75,
+          "entryQty": 1315,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-14",
+              "qty": 1310,
+              "price": 202.72
+            },
+            {
+              "date": "2026-07-15",
+              "qty": 5,
+              "price": 201.34
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-15",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 14,
+          "realizedPnl": -11881.35,
+          "unrealizedPnl": 0,
+          "peakMovePct": 0.8736717827626972,
+          "troughMovePct": -5.015348288075561,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "DATAPATTNS",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "DATAPATTNS__T1",
+          "scripSymbol": "DATAPATTNS",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-22",
+          "entryPrice": 3731.63,
+          "entryQty": 49,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-08",
+              "qty": 24,
+              "price": 4131.41
+            },
+            {
+              "date": "2026-05-15",
+              "qty": 25,
+              "price": 3800.34
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-15",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 23,
+          "realizedPnl": 11312.469999999994,
+          "unrealizedPnl": 0,
+          "peakMovePct": 13.89393107033654,
+          "troughMovePct": 2.590556941604616,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "DCBBANK",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "DCBBANK__T1",
+          "scripSymbol": "DCBBANK",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-15",
+          "entryPrice": 185.88,
+          "entryQty": 993,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-30",
+              "qty": 993,
+              "price": 187.48
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-30",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 15,
+          "realizedPnl": 1588.7999999999943,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.070583171938888,
+          "troughMovePct": -1.1566602108887492,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "DECNGOLD",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "DECNGOLD__T1",
+          "scripSymbol": "DECNGOLD",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-25",
+          "entryPrice": 145.71,
+          "entryQty": 3566,
+          "remainingQty": 1338,
+          "exitEvents": [
+            {
+              "date": "2026-06-03",
+              "qty": 1783,
+              "price": 174.44
+            },
+            {
+              "date": "2026-06-24",
+              "qty": 445,
+              "price": 214.88
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-05-26",
+          "daysToHit": 1,
+          "currentLtp": 204.27999877929688,
+          "currentMovePct": 40.19627944499133,
+          "pctStillNeeded": -17.972145583847375,
+          "daysHeld": 70,
+          "realizedPnl": 82006.23999999998,
+          "unrealizedPnl": 78366.65836669921,
+          "peakMovePct": 56.138906046256245,
+          "troughMovePct": 1.7500514721020988,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "DECNGOLD__T2",
+          "scripSymbol": "DECNGOLD",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-07-23",
+          "entryPrice": 191.96,
+          "entryQty": 3090,
+          "remainingQty": 3090,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 204.27999877929688,
+          "currentMovePct": 6.418003114866044,
+          "pctStillNeeded": 8.064422028170037,
+          "daysHeld": 11,
+          "realizedPnl": 0,
+          "unrealizedPnl": 38068.79622802732,
+          "peakMovePct": 6.418003750781409,
+          "troughMovePct": -0.42196290893936617,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "DELHIVERY",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "DELHIVERY__T1",
+          "scripSymbol": "DELHIVERY",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-17",
+          "entryPrice": 462.52,
+          "entryQty": 398,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-04",
+              "qty": 398,
+              "price": 469.13
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-04",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 17,
+          "realizedPnl": 2630.780000000005,
+          "unrealizedPnl": 0,
+          "peakMovePct": 2.0604514399377383,
+          "troughMovePct": -2.8366340914987465,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "DLINKINDIA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "DLINKINDIA__T1",
+          "scripSymbol": "DLINKINDIA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-22",
+          "entryPrice": 456.56,
+          "entryQty": 363,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-05",
+              "qty": 363,
+              "price": 443.27
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-05",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 13,
+          "realizedPnl": -4824.270000000008,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.147713334501499,
+          "troughMovePct": -3.7037848256527117,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "DLINKINDIA__T2",
+          "scripSymbol": "DLINKINDIA",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-04-28",
+          "entryPrice": 459.96,
+          "entryQty": 184,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-05",
+              "qty": 184,
+              "price": 443.27
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-05",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 7,
+          "realizedPnl": -3070.9599999999996,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.17610226976259025,
+          "troughMovePct": -4.4156013566397085,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "DSSL",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "DSSL__T1",
+          "scripSymbol": "DSSL",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-28",
+          "entryPrice": 1080.75,
+          "entryQty": 232,
+          "remainingQty": 58,
+          "exitEvents": [
+            {
+              "date": "2026-05-08",
+              "qty": 116,
+              "price": 1322.55
+            },
+            {
+              "date": "2026-05-22",
+              "qty": 58,
+              "price": 1673.69
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-05-05",
+          "daysToHit": 7,
+          "currentLtp": 1253.300048828125,
+          "currentMovePct": 15.965769033368037,
+          "pctStillNeeded": -0.8328052678115205,
+          "daysHeld": 97,
+          "realizedPnl": 62439.32,
+          "unrealizedPnl": 10007.90283203125,
+          "peakMovePct": 75.35045107564191,
+          "troughMovePct": -2.646310432569965,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "DSSL__T2",
+          "scripSymbol": "DSSL",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-06-18",
+          "entryPrice": 1404.2900000000002,
+          "entryQty": 101,
+          "remainingQty": 101,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 1253.300048828125,
+          "currentMovePct": -10.752049161631517,
+          "pctStillNeeded": 28.85449908902611,
+          "daysHeld": 46,
+          "realizedPnl": 0,
+          "unrealizedPnl": -15249.985068359394,
+          "peakMovePct": 5.028163698381372,
+          "troughMovePct": -15.857835632241224,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "DYNAMATECH",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "DYNAMATECH__T1",
+          "scripSymbol": "DYNAMATECH",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-22",
+          "entryPrice": 11357.01,
+          "entryQty": 16,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-13",
+              "qty": 16,
+              "price": 10958.66
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-13",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 21,
+          "realizedPnl": -6373.600000000006,
+          "unrealizedPnl": 0,
+          "peakMovePct": 10.328334658506066,
+          "troughMovePct": -5.661789502694814,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "E2E",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "E2E__T1",
+          "scripSymbol": "E2E",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-08",
+          "entryPrice": 2466.59,
+          "entryQty": 19,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-22",
+              "qty": 19,
+              "price": 3424.17
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-22",
+          "hitStatus": "HIT",
+          "hitDate": "2026-04-21",
+          "daysToHit": 13,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 44,
+          "realizedPnl": 18194.019999999997,
+          "unrealizedPnl": 0,
+          "peakMovePct": 46.16535378802311,
+          "troughMovePct": -1.7428920088056854,
+          "splitAdjustFactor": 10
+        },
+        {
+          "id": "E2E__T2",
+          "scripSymbol": "E2E",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-04-28",
+          "entryPrice": 3026.09,
+          "entryQty": 69,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-22",
+              "qty": 25,
+              "price": 3424.17
+            },
+            {
+              "date": "2026-06-15",
+              "qty": 44,
+              "price": 405.09
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-15",
+          "hitStatus": "HIT",
+          "hitDate": "2026-05-11",
+          "daysToHit": 13,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 48,
+          "realizedPnl": -105372,
+          "unrealizedPnl": 0,
+          "peakMovePct": 49.66507935983395,
+          "troughMovePct": -6.437019388055221,
+          "splitAdjustFactor": 10
+        }
+      ]
+    },
+    {
+      "scripSymbol": "ENDURANCE",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "ENDURANCE__T1",
+          "scripSymbol": "ENDURANCE",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-22",
+          "entryPrice": 2684.68,
+          "entryQty": 112,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-13",
+              "qty": 112,
+              "price": 2694.54
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-13",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 21,
+          "realizedPnl": 1104.3200000000143,
+          "unrealizedPnl": 0,
+          "peakMovePct": 0.9654819196328823,
+          "troughMovePct": -3.4037576172951556,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "EUROPRATIK",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "EUROPRATIK__T1",
+          "scripSymbol": "EUROPRATIK",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-23",
+          "entryPrice": 296.77,
+          "entryQty": 1003,
+          "remainingQty": 1003,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 301.70001220703125,
+          "currentMovePct": 1.661223239219356,
+          "pctStillNeeded": 13.120810802554605,
+          "daysHeld": 11,
+          "realizedPnl": 0,
+          "unrealizedPnl": 4944.802243652362,
+          "peakMovePct": 6.008019678538945,
+          "troughMovePct": -0.006739225662966142,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "FACT",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "FACT__T1",
+          "scripSymbol": "FACT",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-17",
+          "entryPrice": 917.1100000000001,
+          "entryQty": 203,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-04",
+              "qty": 203,
+              "price": 903.17
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-04",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 17,
+          "realizedPnl": -2829.8200000000343,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.6453860496559836,
+          "troughMovePct": -2.9996401740249423,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "FACT__T2",
+          "scripSymbol": "FACT",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-04-28",
+          "entryPrice": 909.52,
+          "entryQty": 37,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-04",
+              "qty": 37,
+              "price": 903.17
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-04",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 6,
+          "realizedPnl": -234.95000000000084,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.07366523001143266,
+          "troughMovePct": -1.1346644383850801,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "FIEMIND",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "FIEMIND__T1",
+          "scripSymbol": "FIEMIND",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-03",
+          "entryPrice": 2357.35,
+          "entryQty": 40,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-17",
+              "qty": 40,
+              "price": 2337.54
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-17",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 14,
+          "realizedPnl": -792.3999999999978,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.2492841538167987,
+          "troughMovePct": -5.0628884128364415,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "FIEMIND__T2",
+          "scripSymbol": "FIEMIND",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-06-04",
+          "entryPrice": 2355.72,
+          "entryQty": 49,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-17",
+              "qty": 49,
+              "price": 2337.54
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-17",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 13,
+          "realizedPnl": -890.819999999992,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.3193418572665871,
+          "troughMovePct": -4.9971983087973015,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "FIEMIND__T3",
+          "scripSymbol": "FIEMIND",
+          "exchange": "NSE",
+          "label": "Tranche 3",
+          "entryDate": "2026-07-27",
+          "entryPrice": 2361.21,
+          "entryQty": 127,
+          "remainingQty": 127,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 2338.39990234375,
+          "currentMovePct": -0.9660342644766895,
+          "pctStillNeeded": 16.121776146090138,
+          "daysHeld": 7,
+          "realizedPnl": 0,
+          "unrealizedPnl": -2896.8824023437546,
+          "peakMovePct": 0.24521325930348947,
+          "troughMovePct": -1.6055327565104305,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "GESHIP",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "GESHIP__T1",
+          "scripSymbol": "GESHIP",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-15",
+          "entryPrice": 1512.54,
+          "entryQty": 302,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-03",
+              "qty": 302,
+              "price": 1476.66
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-03",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 19,
+          "realizedPnl": -10835.759999999964,
+          "unrealizedPnl": 0,
+          "peakMovePct": 13.68955531754532,
+          "troughMovePct": -6.190910653602543,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "GMBREW",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "GMBREW__T1",
+          "scripSymbol": "GMBREW",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-30",
+          "entryPrice": 958.37,
+          "entryQty": 325,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-13",
+              "qty": 325,
+              "price": 920.61
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-13",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 13,
+          "realizedPnl": -12271.999999999996,
+          "unrealizedPnl": 0,
+          "peakMovePct": 2.8934545113056487,
+          "troughMovePct": -4.321921596043277,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "GOLDIAM",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "GOLDIAM__T1",
+          "scripSymbol": "GOLDIAM",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-03",
+          "entryPrice": 434.79,
+          "entryQty": 480,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-24",
+              "qty": 480,
+              "price": 457.45
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-24",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 21,
+          "realizedPnl": 10876.799999999985,
+          "unrealizedPnl": 0,
+          "peakMovePct": 14.99804503323443,
+          "troughMovePct": -5.621104441224512,
+          "splitAdjustFactor": 1.3333333333333333
+        }
+      ]
+    },
+    {
+      "scripSymbol": "GRAVITA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "GRAVITA__T1",
+          "scripSymbol": "GRAVITA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-17",
+          "entryPrice": 1692.48,
+          "entryQty": 128,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-06",
+              "qty": 128,
+              "price": 1727.5
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-06",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 19,
+          "realizedPnl": 4482.559999999998,
+          "unrealizedPnl": 0,
+          "peakMovePct": 4.657071280015113,
+          "troughMovePct": -3.8570618264322176,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "GRWRHITECH",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "GRWRHITECH__T1",
+          "scripSymbol": "GRWRHITECH",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-22",
+          "entryPrice": 4013.17,
+          "entryQty": 44,
+          "remainingQty": 3,
+          "exitEvents": [
+            {
+              "date": "2026-05-08",
+              "qty": 22,
+              "price": 5316.91
+            },
+            {
+              "date": "2026-06-24",
+              "qty": 11,
+              "price": 6631.17
+            },
+            {
+              "date": "2026-07-17",
+              "qty": 8,
+              "price": 6837.48
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-05-06",
+          "daysToHit": 14,
+          "currentLtp": 7182,
+          "currentMovePct": 78.96077165931172,
+          "pctStillNeeded": -35.740107212475635,
+          "daysHeld": 103,
+          "realizedPnl": 80074.76,
+          "unrealizedPnl": 9506.49,
+          "peakMovePct": 78.96077165931172,
+          "troughMovePct": -4.980352190413062,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "GRWRHITECH__T2",
+          "scripSymbol": "GRWRHITECH",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-05-25",
+          "entryPrice": 5522.64,
+          "entryQty": 22,
+          "remainingQty": 22,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-06-16",
+          "daysToHit": 22,
+          "currentLtp": 7182,
+          "currentMovePct": 30.04649950023901,
+          "pctStillNeeded": -11.570091896407686,
+          "daysHeld": 70,
+          "realizedPnl": 0,
+          "unrealizedPnl": 36505.91999999999,
+          "peakMovePct": 30.04649950023901,
+          "troughMovePct": 1.181679414193204,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "GRWRHITECH__T3",
+          "scripSymbol": "GRWRHITECH",
+          "exchange": "NSE",
+          "label": "Tranche 3",
+          "entryDate": "2026-07-23",
+          "entryPrice": 6751.19,
+          "entryQty": 57,
+          "remainingQty": 57,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 7182,
+          "currentMovePct": 6.381245380444045,
+          "pctStillNeeded": 8.101761347813952,
+          "daysHeld": 11,
+          "realizedPnl": 0,
+          "unrealizedPnl": 24556.170000000024,
+          "peakMovePct": 6.381245380444045,
+          "troughMovePct": 1.4043450117682932,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "HBLENGINE",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "HBLENGINE__T1",
+          "scripSymbol": "HBLENGINE",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-15",
+          "entryPrice": 801.49,
+          "entryQty": 270,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-30",
+              "qty": 270,
+              "price": 789.01
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-30",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 15,
+          "realizedPnl": -3369.600000000005,
+          "unrealizedPnl": 0,
+          "peakMovePct": 3.214013899112911,
+          "troughMovePct": -1.0842306204693841,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "HIRECT",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "HIRECT__T1",
+          "scripSymbol": "HIRECT",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-15",
+          "entryPrice": 954.5,
+          "entryQty": 436,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-18",
+              "qty": 436,
+              "price": 844.25
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-18",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 3,
+          "realizedPnl": -48069,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.8538501833420642,
+          "troughMovePct": -4.646411733892098,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "INDOTECH",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "INDOTECH__T1",
+          "scripSymbol": "INDOTECH",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-25",
+          "entryPrice": 2934.02,
+          "entryQty": 102,
+          "remainingQty": 51,
+          "exitEvents": [
+            {
+              "date": "2026-07-17",
+              "qty": 51,
+              "price": 3344.97
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-07-13",
+          "daysToHit": 18,
+          "currentLtp": 3470.699951171875,
+          "currentMovePct": 18.291625523066468,
+          "pctStillNeeded": -2.7826361405648536,
+          "daysHeld": 39,
+          "realizedPnl": 20958.44999999999,
+          "unrealizedPnl": 27370.677509765625,
+          "peakMovePct": 19.40613560916422,
+          "troughMovePct": 0.04021785809229517,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "INFOBEAN",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "INFOBEAN__T1",
+          "scripSymbol": "INFOBEAN",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-22",
+          "entryPrice": 182.61,
+          "entryQty": 986,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-04-24",
+              "qty": 986,
+              "price": 167.42
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-04-24",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 2,
+          "realizedPnl": -14977.340000000026,
+          "unrealizedPnl": 0,
+          "peakMovePct": 0.03285690816492437,
+          "troughMovePct": -7.808991840534485,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "INFOBEAN__T2",
+          "scripSymbol": "INFOBEAN",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-06-15",
+          "entryPrice": 174.38,
+          "entryQty": 1195,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-22",
+              "qty": 1195,
+              "price": 157.64
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-22",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 7,
+          "realizedPnl": -20004.30000000001,
+          "unrealizedPnl": 0,
+          "peakMovePct": -1.3418970065374514,
+          "troughMovePct": -9.444890469090495,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "IPCALAB",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "IPCALAB__T1",
+          "scripSymbol": "IPCALAB",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-15",
+          "entryPrice": 1611.72,
+          "entryQty": 286,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-02",
+              "qty": 286,
+              "price": 1480.22
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-02",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 18,
+          "realizedPnl": -37609,
+          "unrealizedPnl": 0,
+          "peakMovePct": 2.7597845779663954,
+          "troughMovePct": -7.527362072816612,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "JAGSNPHARM",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "JAGSNPHARM__T1",
+          "scripSymbol": "JAGSNPHARM",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-10",
+          "entryPrice": 205.51,
+          "entryQty": 1032,
+          "remainingQty": 526,
+          "exitEvents": [
+            {
+              "date": "2026-07-06",
+              "qty": 506,
+              "price": 236.5
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-06-30",
+          "daysToHit": 20,
+          "currentLtp": 235.3699951171875,
+          "currentMovePct": 14.529704207672388,
+          "pctStillNeeded": 0.4106321548467795,
+          "daysHeld": 54,
+          "realizedPnl": 15680.940000000004,
+          "unrealizedPnl": 15706.35743164063,
+          "peakMovePct": 16.159797576760248,
+          "troughMovePct": -0.4768624397839427,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "JAGSNPHARM__T2",
+          "scripSymbol": "JAGSNPHARM",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-07-23",
+          "entryPrice": 219.64,
+          "entryQty": 177,
+          "remainingQty": 177,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 235.3699951171875,
+          "currentMovePct": 7.161716953736796,
+          "pctStillNeeded": 7.314443319013897,
+          "daysHeld": 11,
+          "realizedPnl": 0,
+          "unrealizedPnl": 2784.20913574219,
+          "peakMovePct": 7.466763795301401,
+          "troughMovePct": -0.8286286650883268,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "JAMNAAUTO",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "JAMNAAUTO__T1",
+          "scripSymbol": "JAMNAAUTO",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-15",
+          "entryPrice": 126.78000000000002,
+          "entryQty": 1711,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-30",
+              "qty": 1700,
+              "price": 132.39
+            },
+            {
+              "date": "2026-07-01",
+              "qty": 11,
+              "price": 131.8
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-01",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 16,
+          "realizedPnl": 9592.21999999995,
+          "unrealizedPnl": 0,
+          "peakMovePct": 6.160277646316437,
+          "troughMovePct": -1.4355576589367591,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "JSFB",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "JSFB__T1",
+          "scripSymbol": "JSFB",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-25",
+          "entryPrice": 451.19000000000005,
+          "entryQty": 659,
+          "remainingQty": 330,
+          "exitEvents": [
+            {
+              "date": "2026-07-17",
+              "qty": 329,
+              "price": 489.76
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-07-20",
+          "daysToHit": 25,
+          "currentLtp": 584.8499755859375,
+          "currentMovePct": 29.62387809701843,
+          "pctStillNeeded": -11.281777949949179,
+          "daysHeld": 39,
+          "realizedPnl": 12689.529999999979,
+          "unrealizedPnl": 44107.791943359356,
+          "peakMovePct": 29.62388350805647,
+          "troughMovePct": -2.2141448170393985,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "KAJARIACER",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "KAJARIACER__T1",
+          "scripSymbol": "KAJARIACER",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-10",
+          "entryPrice": 1076.63,
+          "entryQty": 196,
+          "remainingQty": 98,
+          "exitEvents": [
+            {
+              "date": "2026-07-01",
+              "qty": 98,
+              "price": 1204.33
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-07-16",
+          "daysToHit": 36,
+          "currentLtp": 1214.699951171875,
+          "currentMovePct": 12.824271214054495,
+          "pctStillNeeded": 1.9284226368434743,
+          "daysHeld": 54,
+          "realizedPnl": 12514.599999999982,
+          "unrealizedPnl": 13530.85521484374,
+          "peakMovePct": 15.378542303298248,
+          "troughMovePct": -0.8573047379322518,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "KIRLOSBROS",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "KIRLOSBROS__T1",
+          "scripSymbol": "KIRLOSBROS",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-15",
+          "entryPrice": 1760.0100000000002,
+          "entryQty": 98,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-04-24",
+              "qty": 98,
+              "price": 1642.35
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-04-24",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 9,
+          "realizedPnl": -11530.68000000003,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.084652928108354,
+          "troughMovePct": -6.53462196237522,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "KMEW",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "KMEW__T1",
+          "scripSymbol": "KMEW",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-27",
+          "entryPrice": 1826.29,
+          "entryQty": 104,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-08",
+              "qty": 63,
+              "price": 2145.84
+            },
+            {
+              "date": "2026-06-01",
+              "qty": 41,
+              "price": 1783.97
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-01",
+          "hitStatus": "HIT",
+          "hitDate": "2026-05-05",
+          "daysToHit": 8,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 35,
+          "realizedPnl": 18396.530000000013,
+          "unrealizedPnl": 0,
+          "peakMovePct": 20.993927579957173,
+          "troughMovePct": -5.036987554002925,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "KMEW__T2",
+          "scripSymbol": "KMEW",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-04-28",
+          "entryPrice": 1827.42,
+          "entryQty": 23,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-01",
+              "qty": 23,
+              "price": 1783.97
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-01",
+          "hitStatus": "HIT",
+          "hitDate": "2026-05-05",
+          "daysToHit": 7,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 34,
+          "realizedPnl": -999.350000000001,
+          "unrealizedPnl": 0,
+          "peakMovePct": 20.91911000207942,
+          "troughMovePct": -5.0957087040746085,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "KMEW__T3",
+          "scripSymbol": "KMEW",
+          "exchange": "NSE",
+          "label": "Tranche 3",
+          "entryDate": "2026-05-25",
+          "entryPrice": 2033.54,
+          "entryQty": 64,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-01",
+              "qty": 64,
+              "price": 1783.97
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-01",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 7,
+          "realizedPnl": -15972.479999999996,
+          "unrealizedPnl": 0,
+          "peakMovePct": 5.608943025462998,
+          "troughMovePct": -14.715225665588083,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "KRISHANA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "KRISHANA__T1",
+          "scripSymbol": "KRISHANA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-06",
+          "entryPrice": 569.44,
+          "entryQty": 291,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-04-22",
+              "qty": 146,
+              "price": 635.46
+            },
+            {
+              "date": "2026-05-04",
+              "qty": 145,
+              "price": 601.9
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-04",
+          "hitStatus": "HIT",
+          "hitDate": "2026-04-27",
+          "daysToHit": 21,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 28,
+          "realizedPnl": 14345.619999999988,
+          "unrealizedPnl": 0,
+          "peakMovePct": 20.618502388311335,
+          "troughMovePct": -2.6411913458836866,
+          "splitAdjustFactor": 5
+        }
+      ]
+    },
+    {
+      "scripSymbol": "KRN",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "KRN__T1",
+          "scripSymbol": "KRN",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-08",
+          "entryPrice": 945.9,
+          "entryQty": 197,
+          "remainingQty": 99,
+          "exitEvents": [
+            {
+              "date": "2026-04-17",
+              "qty": 98,
+              "price": 1264.85
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-04-15",
+          "daysToHit": 7,
+          "currentLtp": 1212.0999755859375,
+          "currentMovePct": 28.142507198005863,
+          "pctStillNeeded": -10.25616517530602,
+          "daysHeld": 117,
+          "realizedPnl": 31257.099999999995,
+          "unrealizedPnl": 26353.797583007814,
+          "peakMovePct": 40.52225393804842,
+          "troughMovePct": 0.6237445818796816,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "KRN__T2",
+          "scripSymbol": "KRN",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-06-04",
+          "entryPrice": 1196.29,
+          "entryQty": 64,
+          "remainingQty": 64,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 1212.0999755859375,
+          "currentMovePct": 1.3215838622689713,
+          "pctStillNeeded": 13.500002286111812,
+          "daysHeld": 60,
+          "realizedPnl": 0,
+          "unrealizedPnl": 1011.8384375000023,
+          "peakMovePct": 7.883539944327866,
+          "troughMovePct": -3.3177573999615517,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "KRN__T3",
+          "scripSymbol": "KRN",
+          "exchange": "NSE",
+          "label": "Tranche 3",
+          "entryDate": "2026-07-01",
+          "entryPrice": 1251.88,
+          "entryQty": 107,
+          "remainingQty": 107,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 1212.0999755859375,
+          "currentMovePct": -3.1776228084211433,
+          "pctStillNeeded": 18.774195940731488,
+          "daysHeld": 33,
+          "realizedPnl": 0,
+          "unrealizedPnl": -4256.462612304699,
+          "peakMovePct": 3.092948205898316,
+          "troughMovePct": -7.6109531264977655,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "KSHINTL",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "KSHINTL__T1",
+          "scripSymbol": "KSHINTL",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-17",
+          "entryPrice": 859.72,
+          "entryQty": 346,
+          "remainingQty": 346,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 878.2000122070312,
+          "currentMovePct": 2.149538478461732,
+          "pctStillNeeded": 12.580048537613099,
+          "daysHeld": 17,
+          "realizedPnl": 0,
+          "unrealizedPnl": 6394.084223632803,
+          "peakMovePct": 5.307541990415476,
+          "troughMovePct": -3.991997394500546,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "LIQUIDBEES",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "LIQUIDBEES__T1",
+          "scripSymbol": "LIQUIDBEES",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-03",
+          "entryPrice": 1000,
+          "entryQty": 387,
+          "remainingQty": 67,
+          "exitEvents": [
+            {
+              "date": "2026-07-23",
+              "qty": 200,
+              "price": 999.99
+            },
+            {
+              "date": "2026-07-30",
+              "qty": 120,
+              "price": 1000
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 999.989990234375,
+          "currentMovePct": -0.0010009765625040856,
+          "pctStillNeeded": 15.001151134569458,
+          "daysHeld": 31,
+          "realizedPnl": -1.999999999998181,
+          "unrealizedPnl": -0.670654296875,
+          "peakMovePct": 0,
+          "troughMovePct": -0.000999999999995449,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "MACPOWER",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "MACPOWER__T1",
+          "scripSymbol": "MACPOWER",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-27",
+          "entryPrice": 1143.49,
+          "entryQty": 168,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-15",
+              "qty": 168,
+              "price": 1103.53
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-15",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 18,
+          "realizedPnl": -6713.280000000006,
+          "unrealizedPnl": 0,
+          "peakMovePct": 8.011438665838778,
+          "troughMovePct": -4.8264523520100795,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "MACPOWER__T2",
+          "scripSymbol": "MACPOWER",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-04-28",
+          "entryPrice": 1150.15,
+          "entryQty": 38,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-15",
+              "qty": 38,
+              "price": 1103.53
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-15",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 17,
+          "realizedPnl": -1771.5600000000045,
+          "unrealizedPnl": 0,
+          "peakMovePct": 7.3859931313306815,
+          "troughMovePct": -5.377559448767566,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "MACPOWER__T3",
+          "scripSymbol": "MACPOWER",
+          "exchange": "NSE",
+          "label": "Tranche 3",
+          "entryDate": "2026-05-07",
+          "entryPrice": 1191.84,
+          "entryQty": 213,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-15",
+              "qty": 124,
+              "price": 1103.53
+            },
+            {
+              "date": "2026-05-18",
+              "qty": 89,
+              "price": 1101.17
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-18",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 11,
+          "realizedPnl": -19020.069999999978,
+          "unrealizedPnl": 0,
+          "peakMovePct": 3.629681836488108,
+          "troughMovePct": -8.687407705732308,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "MANORAMA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "MANORAMA__T1",
+          "scripSymbol": "MANORAMA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-05",
+          "entryPrice": 1615.79,
+          "entryQty": 158,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-12",
+              "qty": 158,
+              "price": 1467.96
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-12",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 7,
+          "realizedPnl": -23357.13999999999,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.5130617221297262,
+          "troughMovePct": -13.590256159525671,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "MANORAMA__T2",
+          "scripSymbol": "MANORAMA",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-05-07",
+          "entryPrice": 1591.37,
+          "entryQty": 157,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-12",
+              "qty": 157,
+              "price": 1467.96
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-12",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 5,
+          "realizedPnl": -19375.369999999977,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.0135920621854089,
+          "troughMovePct": -12.264275435630923,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "MARKSANS",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "MARKSANS__T1",
+          "scripSymbol": "MARKSANS",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-15",
+          "entryPrice": 211.44,
+          "entryQty": 2220,
+          "remainingQty": 832,
+          "exitEvents": [
+            {
+              "date": "2026-06-03",
+              "qty": 1110,
+              "price": 241.43
+            },
+            {
+              "date": "2026-07-17",
+              "qty": 278,
+              "price": 266.78
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-05-26",
+          "daysToHit": 11,
+          "currentLtp": 262.25,
+          "currentMovePct": 24.03045781309119,
+          "pctStillNeeded": -7.280838894184949,
+          "daysHeld": 80,
+          "realizedPnl": 48673.42,
+          "unrealizedPnl": 42273.92,
+          "peakMovePct": 31.148316307226654,
+          "troughMovePct": -1.8870601589103364,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "MARKSANS__T2",
+          "scripSymbol": "MARKSANS",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-07-23",
+          "entryPrice": 248.53,
+          "entryQty": 1682,
+          "remainingQty": 1682,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 262.25,
+          "currentMovePct": 5.520460306602826,
+          "pctStillNeeded": 8.983603431839837,
+          "daysHeld": 11,
+          "realizedPnl": 0,
+          "unrealizedPnl": 23077.039999999997,
+          "peakMovePct": 5.983181104896773,
+          "troughMovePct": -0.9777491650907355,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "MMFL",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "MMFL__T1",
+          "scripSymbol": "MMFL",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-15",
+          "entryPrice": 462.16,
+          "entryQty": 480,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-24",
+              "qty": 480,
+              "price": 446.24
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-24",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 9,
+          "realizedPnl": -7641.600000000008,
+          "unrealizedPnl": 0,
+          "peakMovePct": 2.0966764756794154,
+          "troughMovePct": -5.108620391206509,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "MUTHOOTMF",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "MUTHOOTMF__T1",
+          "scripSymbol": "MUTHOOTMF",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-09",
+          "entryPrice": 181.47,
+          "entryQty": 1150,
+          "remainingQty": 431,
+          "exitEvents": [
+            {
+              "date": "2026-07-01",
+              "qty": 575,
+              "price": 213.97
+            },
+            {
+              "date": "2026-07-17",
+              "qty": 144,
+              "price": 240.25
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-06-24",
+          "daysToHit": 15,
+          "currentLtp": 235.66000366210938,
+          "currentMovePct": 29.861687145042914,
+          "pctStillNeeded": -11.44424308028884,
+          "daysHeld": 55,
+          "realizedPnl": 27151.82,
+          "unrealizedPnl": 23355.89157836914,
+          "peakMovePct": 40.965448834518114,
+          "troughMovePct": -0.4628864275086797,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "NILE",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "NILE__T1",
+          "scripSymbol": "NILE",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-25",
+          "entryPrice": 1777.49,
+          "entryQty": 169,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-21",
+              "qty": 169,
+              "price": 1828.32
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-21",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 26,
+          "realizedPnl": 8590.269999999988,
+          "unrealizedPnl": 0,
+          "peakMovePct": 11.46616858603986,
+          "troughMovePct": -3.886941698687474,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "NUVAMA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "NUVAMA__T1",
+          "scripSymbol": "NUVAMA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-04",
+          "entryPrice": 1562.2200000000003,
+          "entryQty": 201,
+          "remainingQty": 83,
+          "exitEvents": [
+            {
+              "date": "2026-06-22",
+              "qty": 47,
+              "price": 1754.21
+            },
+            {
+              "date": "2026-06-24",
+              "qty": 43,
+              "price": 1738.06
+            },
+            {
+              "date": "2026-07-17",
+              "qty": 28,
+              "price": 1845.33
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-06-30",
+          "daysToHit": 26,
+          "currentLtp": 1765.699951171875,
+          "currentMovePct": 13.025050964132756,
+          "pctStillNeeded": 1.747355138547091,
+          "daysHeld": 60,
+          "realizedPnl": 24511.729999999967,
+          "unrealizedPnl": 16888.835947265605,
+          "peakMovePct": 26.749113441128625,
+          "troughMovePct": -3.329876713907143,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "ONEPOINT",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "ONEPOINT__T1",
+          "scripSymbol": "ONEPOINT",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-07",
+          "entryPrice": 58.44,
+          "entryQty": 8695,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-26",
+              "qty": 4347,
+              "price": 60.7
+            },
+            {
+              "date": "2026-06-03",
+              "qty": 4348,
+              "price": 58.11
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-03",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 27,
+          "realizedPnl": 8389.38000000003,
+          "unrealizedPnl": 0,
+          "peakMovePct": 10.36960985626283,
+          "troughMovePct": -0.8042436687200505,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "PARAS",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "PARAS__T1",
+          "scripSymbol": "PARAS",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-04",
+          "entryPrice": 899.13,
+          "entryQty": 221,
+          "remainingQty": 83,
+          "exitEvents": [
+            {
+              "date": "2026-06-16",
+              "qty": 110,
+              "price": 1091.66
+            },
+            {
+              "date": "2026-06-24",
+              "qty": 28,
+              "price": 1300.13
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-06-09",
+          "daysToHit": 5,
+          "currentLtp": 1292.300048828125,
+          "currentMovePct": 43.72783121774659,
+          "pctStillNeeded": -19.987660687806642,
+          "daysHeld": 60,
+          "realizedPnl": 32406.300000000014,
+          "unrealizedPnl": 32633.114052734374,
+          "peakMovePct": 56.66811250875847,
+          "troughMovePct": -0.5927952576379458,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "PARAS__T2",
+          "scripSymbol": "PARAS",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-07-23",
+          "entryPrice": 1202.51,
+          "entryQty": 116,
+          "remainingQty": 116,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 1292.300048828125,
+          "currentMovePct": 7.466885832810122,
+          "pctStillNeeded": 7.009707324086212,
+          "daysHeld": 11,
+          "realizedPnl": 0,
+          "unrealizedPnl": 10415.6456640625,
+          "peakMovePct": 7.466881772292955,
+          "troughMovePct": -1.3646456162526799,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "PASUPTAC",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "PASUPTAC__T1",
+          "scripSymbol": "PASUPTAC",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-30",
+          "entryPrice": 59.81,
+          "entryQty": 5124,
+          "remainingQty": 5124,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 60.4900016784668,
+          "currentMovePct": 1.1369364294713247,
+          "pctStillNeeded": 13.707221179471052,
+          "daysHeld": 4,
+          "realizedPnl": 0,
+          "unrealizedPnl": 3484.3286004638558,
+          "peakMovePct": 1.1369336231399352,
+          "troughMovePct": -2.8924928941648664,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "PITTIENG",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "PITTIENG__T1",
+          "scripSymbol": "PITTIENG",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-01",
+          "entryPrice": 969.4800000000001,
+          "entryQty": 314,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-14",
+              "qty": 314,
+              "price": 960.66
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-14",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 13,
+          "realizedPnl": -2769.4800000000514,
+          "unrealizedPnl": 0,
+          "peakMovePct": 0.4971737426249012,
+          "troughMovePct": -4.670545034451468,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "PIXTRANS",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "PIXTRANS__T1",
+          "scripSymbol": "PIXTRANS",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-17",
+          "entryPrice": 1607.58,
+          "entryQty": 135,
+          "remainingQty": 68,
+          "exitEvents": [
+            {
+              "date": "2026-07-07",
+              "qty": 67,
+              "price": 1762.09
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-06-29",
+          "daysToHit": 12,
+          "currentLtp": 1701.0999755859375,
+          "currentMovePct": 5.817438359891125,
+          "pctStillNeeded": 8.677739494012759,
+          "daysHeld": 47,
+          "realizedPnl": 10352.17,
+          "unrealizedPnl": 6359.358339843755,
+          "peakMovePct": 18.92409709003595,
+          "troughMovePct": 0.013685166523602632,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "POCL",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "POCL__T1",
+          "scripSymbol": "POCL",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-04",
+          "entryPrice": 1329.76,
+          "entryQty": 181,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-09",
+              "qty": 181,
+              "price": 1222.54
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-09",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 5,
+          "realizedPnl": -19406.820000000003,
+          "unrealizedPnl": 0,
+          "peakMovePct": -1.8544699795451924,
+          "troughMovePct": -7.5171459511490735,
+          "splitAdjustFactor": 2.5
+        }
+      ]
+    },
+    {
+      "scripSymbol": "PRADPME",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "PRADPME__T1",
+          "scripSymbol": "PRADPME",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-22",
+          "entryPrice": 379.08,
+          "entryQty": 475,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-04",
+              "qty": 475,
+              "price": 369.46
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-04",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 12,
+          "realizedPnl": -4569.500000000002,
+          "unrealizedPnl": 0,
+          "peakMovePct": 2.63005170412578,
+          "troughMovePct": -2.6722591537406304,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "PRADPME__T2",
+          "scripSymbol": "PRADPME",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-04-28",
+          "entryPrice": 390.57,
+          "entryQty": 109,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-04",
+              "qty": 109,
+              "price": 369.46
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-04",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 6,
+          "realizedPnl": -2300.9900000000016,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.38917479581124237,
+          "troughMovePct": -5.164247125995347,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "PRICOLLTD",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "PRICOLLTD__T1",
+          "scripSymbol": "PRICOLLTD",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-30",
+          "entryPrice": 605.7086194029852,
+          "entryQty": 536,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-30",
+              "qty": 30,
+              "price": 605.07
+            },
+            {
+              "date": "2026-07-13",
+              "qty": 506,
+              "price": 621.65
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-13",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 13,
+          "realizedPnl": 8047.179999999942,
+          "unrealizedPnl": 0,
+          "peakMovePct": 3.5563932734269166,
+          "troughMovePct": -0.5627490337424823,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "QPOWER",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "QPOWER__T1",
+          "scripSymbol": "QPOWER",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-08",
+          "entryPrice": 908.66,
+          "entryQty": 205,
+          "remainingQty": 137,
+          "exitEvents": [
+            {
+              "date": "2026-04-17",
+              "qty": 68,
+              "price": 1211.37
+            }
+          ],
+          "status": "PARTIALLY_CLOSED",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-04-15",
+          "daysToHit": 7,
+          "currentLtp": 1158,
+          "currentMovePct": 27.44040675280084,
+          "pctStillNeeded": -9.76174438687394,
+          "daysHeld": 117,
+          "realizedPnl": 20584.279999999995,
+          "unrealizedPnl": 34159.58,
+          "peakMovePct": 53.92996280236832,
+          "troughMovePct": -0.05062399577399068,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "QPOWER__T2",
+          "scripSymbol": "QPOWER",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-06-04",
+          "entryPrice": 1047.47,
+          "entryQty": 163,
+          "remainingQty": 163,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-06-12",
+          "daysToHit": 8,
+          "currentLtp": 1158,
+          "currentMovePct": 10.552092184024353,
+          "pctStillNeeded": 4.023359240069091,
+          "daysHeld": 60,
+          "realizedPnl": 0,
+          "unrealizedPnl": 18016.389999999996,
+          "peakMovePct": 26.075209791211186,
+          "troughMovePct": -2.5270413472462283,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "QPOWER__T3",
+          "scripSymbol": "QPOWER",
+          "exchange": "NSE",
+          "label": "Tranche 3",
+          "entryDate": "2026-06-30",
+          "entryPrice": 1224.73,
+          "entryQty": 29,
+          "remainingQty": 29,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 1158,
+          "currentMovePct": -5.448547843198092,
+          "pctStillNeeded": 21.626899827288426,
+          "daysHeld": 34,
+          "realizedPnl": 0,
+          "unrealizedPnl": -1935.1700000000005,
+          "peakMovePct": -0.10859536387611834,
+          "troughMovePct": -11.86628889632816,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "QPOWER__T4",
+          "scripSymbol": "QPOWER",
+          "exchange": "NSE",
+          "label": "Tranche 4",
+          "entryDate": "2026-07-23",
+          "entryPrice": 1112.74,
+          "entryQty": 42,
+          "remainingQty": 42,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 1158,
+          "currentMovePct": 4.067437137156937,
+          "pctStillNeeded": 10.505267702936072,
+          "daysHeld": 11,
+          "realizedPnl": 0,
+          "unrealizedPnl": 1900.9199999999996,
+          "peakMovePct": 4.067437137156937,
+          "troughMovePct": -2.9962075597174453,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "REDINGTON",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "REDINGTON__T1",
+          "scripSymbol": "REDINGTON",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-27",
+          "entryPrice": 268.2,
+          "entryQty": 1123,
+          "remainingQty": 1123,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "HIT_RUNNING",
+          "hitDate": "2026-07-30",
+          "daysToHit": 3,
+          "currentLtp": 347.8500061035156,
+          "currentMovePct": 29.697988852914104,
+          "pctStillNeeded": -11.332472448422148,
+          "daysHeld": 7,
+          "realizedPnl": 0,
+          "unrealizedPnl": 89446.95685424806,
+          "peakMovePct": 29.69798657718121,
+          "troughMovePct": 3.6726323639075353,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "RICOAUTO",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "RICOAUTO__T1",
+          "scripSymbol": "RICOAUTO",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-04",
+          "entryPrice": 131.81,
+          "entryQty": 1600,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-24",
+              "qty": 1600,
+              "price": 141.75
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-24",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 20,
+          "realizedPnl": 15903.999999999996,
+          "unrealizedPnl": 0,
+          "peakMovePct": 12.199377892420893,
+          "troughMovePct": -3.3305515514756134,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "RKFORGE",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "RKFORGE__T1",
+          "scripSymbol": "RKFORGE",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-28",
+          "entryPrice": 590.41,
+          "entryQty": 426,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-14",
+              "qty": 426,
+              "price": 572.39
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-14",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 16,
+          "realizedPnl": -7676.519999999992,
+          "unrealizedPnl": 0,
+          "peakMovePct": 5.51142426449418,
+          "troughMovePct": -1.5599329279653018,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "RKFORGE__T2",
+          "scripSymbol": "RKFORGE",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-05-07",
+          "entryPrice": 626.27,
+          "entryQty": 399,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-14",
+              "qty": 399,
+              "price": 572.39
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-14",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 7,
+          "realizedPnl": -21498.12,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.6818145528286523,
+          "troughMovePct": -7.196576556437306,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "SENCO",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "SENCO__T1",
+          "scripSymbol": "SENCO",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-05",
+          "entryPrice": 347.07,
+          "entryQty": 731,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-13",
+              "qty": 731,
+              "price": 324.89
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-13",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 8,
+          "realizedPnl": -16213.580000000005,
+          "unrealizedPnl": 0,
+          "peakMovePct": 5.281355346183769,
+          "troughMovePct": -9.888495116258966,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "SENCO__T2",
+          "scripSymbol": "SENCO",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-05-07",
+          "entryPrice": 345.69,
+          "entryQty": 726,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-13",
+              "qty": 726,
+              "price": 324.89
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-13",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 6,
+          "realizedPnl": -15100.800000000008,
+          "unrealizedPnl": 0,
+          "peakMovePct": 5.701640197865143,
+          "troughMovePct": -9.528768549856803,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "SGFIN",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "SGFIN__T1",
+          "scripSymbol": "SGFIN",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-21",
+          "entryPrice": 677.3,
+          "entryQty": 443,
+          "remainingQty": 443,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 702.5999755859375,
+          "currentMovePct": 3.7354164455835726,
+          "pctStillNeeded": 10.858956314428525,
+          "daysHeld": 13,
+          "realizedPnl": 0,
+          "unrealizedPnl": 11207.889184570333,
+          "peakMovePct": 3.735420050199334,
+          "troughMovePct": -2.731433633544955,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "SHANTIGOLD",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "SHANTIGOLD__T1",
+          "scripSymbol": "SHANTIGOLD",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-29",
+          "entryPrice": 223.88999999999996,
+          "entryQty": 1351,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-13",
+              "qty": 1351,
+              "price": 212.39
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-13",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 14,
+          "realizedPnl": -15536.499999999962,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.08932958149089343,
+          "troughMovePct": -5.270445307963712,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "SHYAMMETL",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "SHYAMMETL__T1",
+          "scripSymbol": "SHYAMMETL",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-29",
+          "entryPrice": 950.6900000000002,
+          "entryQty": 316,
+          "remainingQty": 316,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 1025.0999755859375,
+          "currentMovePct": 7.826944175907746,
+          "pctStillNeeded": 6.6523779180741816,
+          "daysHeld": 35,
+          "realizedPnl": 0,
+          "unrealizedPnl": 23513.5522851562,
+          "peakMovePct": 11.776709547802122,
+          "troughMovePct": -2.3498721980877213,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "SIYSIL",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "SIYSIL__T1",
+          "scripSymbol": "SIYSIL",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-13",
+          "entryPrice": 652.09,
+          "entryQty": 460,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-24",
+              "qty": 460,
+              "price": 596.31
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-24",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 11,
+          "realizedPnl": -25658.80000000004,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.3818491312548855,
+          "troughMovePct": -6.538974681409004,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "SOBHA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "SOBHA__T1",
+          "scripSymbol": "SOBHA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-13",
+          "entryPrice": 1506.85,
+          "entryQty": 198,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-23",
+              "qty": 198,
+              "price": 1388.57
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-23",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 10,
+          "realizedPnl": -23419.439999999995,
+          "unrealizedPnl": 0,
+          "peakMovePct": 0.713408766632373,
+          "troughMovePct": -8.677041510435679,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "STEELCAS",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "STEELCAS__T1",
+          "scripSymbol": "STEELCAS",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-21",
+          "entryPrice": 307.86,
+          "entryQty": 974,
+          "remainingQty": 974,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 325.8999938964844,
+          "currentMovePct": 5.859804422946913,
+          "pctStillNeeded": 8.634245667538544,
+          "daysHeld": 13,
+          "realizedPnl": 0,
+          "unrealizedPnl": 17570.954055175767,
+          "peakMovePct": 5.859806405508983,
+          "troughMovePct": -2.471902812966942,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "STLTECH",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "STLTECH__T1",
+          "scripSymbol": "STLTECH",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-08",
+          "entryPrice": 201.25999999999996,
+          "entryQty": 233,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-08",
+              "qty": 116,
+              "price": 375.39
+            },
+            {
+              "date": "2026-06-15",
+              "qty": 117,
+              "price": 591.5
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-15",
+          "hitStatus": "HIT",
+          "hitDate": "2026-04-13",
+          "daysToHit": 5,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 68,
+          "realizedPnl": 65857.16,
+          "unrealizedPnl": 0,
+          "peakMovePct": 223.76031004670583,
+          "troughMovePct": -0.3726522905693974,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "SUDEEPPHRM",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "SUDEEPPHRM__T1",
+          "scripSymbol": "SUDEEPPHRM",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-17",
+          "entryPrice": 869.53,
+          "entryQty": 348,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-24",
+              "qty": 348,
+              "price": 811.28
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-24",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 7,
+          "realizedPnl": -20271,
+          "unrealizedPnl": 0,
+          "peakMovePct": 0.04830195622924638,
+          "troughMovePct": -6.236702586454756,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "TALBROSENG",
+      "exchange": "BSE",
+      "tranches": [
+        {
+          "id": "TALBROSENG__T1",
+          "scripSymbol": "TALBROSENG",
+          "exchange": "BSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-04",
+          "entryPrice": 713.68,
+          "entryQty": 281,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-30",
+              "qty": 281,
+              "price": 698.95
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-30",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 26,
+          "realizedPnl": -4139.129999999973,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.5016253783208025,
+          "troughMovePct": -6.449669319583007,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "TANLA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "TANLA__T1",
+          "scripSymbol": "TANLA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-13",
+          "entryPrice": 572.64,
+          "entryQty": 528,
+          "remainingQty": 528,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 614.1500244140625,
+          "currentMovePct": 7.248886632799412,
+          "pctStillNeeded": 7.2272203568312765,
+          "daysHeld": 21,
+          "realizedPnl": 0,
+          "unrealizedPnl": 21917.29289062501,
+          "peakMovePct": 8.00852193350099,
+          "troughMovePct": -4.119516624755526,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "TATVA",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "TATVA__T1",
+          "scripSymbol": "TATVA",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-27",
+          "entryPrice": 1343.91,
+          "entryQty": 143,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-14",
+              "qty": 143,
+              "price": 1251.87
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-14",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 17,
+          "realizedPnl": -13161.720000000027,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.3683952050360437,
+          "troughMovePct": -6.236280703320918,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "TATVA__T2",
+          "scripSymbol": "TATVA",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-04-28",
+          "entryPrice": 1335.74,
+          "entryQty": 34,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-14",
+              "qty": 34,
+              "price": 1251.87
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-05-14",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 16,
+          "realizedPnl": -2851.580000000004,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.9884109182924714,
+          "troughMovePct": -5.662778684474534,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "THYROCARE",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "THYROCARE__T1",
+          "scripSymbol": "THYROCARE",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-04",
+          "entryPrice": 525.16,
+          "entryQty": 378,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-24",
+              "qty": 378,
+              "price": 544.72
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-24",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 20,
+          "realizedPnl": 7393.680000000022,
+          "unrealizedPnl": 0,
+          "peakMovePct": 6.329499581080045,
+          "troughMovePct": -1.3633940132530942,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "THYROCARE__T2",
+          "scripSymbol": "THYROCARE",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-07-23",
+          "entryPrice": 550.46,
+          "entryQty": 540,
+          "remainingQty": 540,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 592.5499877929688,
+          "currentMovePct": 7.6463299409527785,
+          "pctStillNeeded": 6.831324452102461,
+          "daysHeld": 11,
+          "realizedPnl": 0,
+          "unrealizedPnl": 22728.593408203105,
+          "peakMovePct": 7.646332158558278,
+          "troughMovePct": -0.9464811248773852,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "TIPSMUSIC",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "TIPSMUSIC__T1",
+          "scripSymbol": "TIPSMUSIC",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-21",
+          "entryPrice": 713.0899999999999,
+          "entryQty": 420,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-07-30",
+              "qty": 420,
+              "price": 669.58
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-07-30",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 9,
+          "realizedPnl": -18274.19999999995,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.07572676660729805,
+          "troughMovePct": -12.654784108597783,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "UNIVCABLES",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "UNIVCABLES__T1",
+          "scripSymbol": "UNIVCABLES",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-25",
+          "entryPrice": 1157.84,
+          "entryQty": 441,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-09",
+              "qty": 220,
+              "price": 1204.91
+            },
+            {
+              "date": "2026-06-15",
+              "qty": 221,
+              "price": 1194.53
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-15",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 21,
+          "realizedPnl": 18463.89000000005,
+          "unrealizedPnl": 0,
+          "peakMovePct": 7.329164651419906,
+          "troughMovePct": -5.539625509569534,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "VIMTALABS",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "VIMTALABS__T1",
+          "scripSymbol": "VIMTALABS",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-07-17",
+          "entryPrice": 552.45,
+          "entryQty": 554,
+          "remainingQty": 554,
+          "exitEvents": [],
+          "status": "OPEN",
+          "closedDate": null,
+          "hitStatus": "ACTIVE",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": 620.1500244140625,
+          "currentMovePct": 12.254507089159649,
+          "pctStillNeeded": 2.4457752138715483,
+          "daysHeld": 17,
+          "realizedPnl": 0,
+          "unrealizedPnl": 37505.8135253906,
+          "peakMovePct": 12.254502669924872,
+          "troughMovePct": -4.018463209340217,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "VIYASH",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "VIYASH__T1",
+          "scripSymbol": "VIYASH",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-25",
+          "entryPrice": 260.13,
+          "entryQty": 2030,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-02",
+              "qty": 2030,
+              "price": 250.57
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-02",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 8,
+          "realizedPnl": -19406.800000000003,
+          "unrealizedPnl": 0,
+          "peakMovePct": 0.6958059431822594,
+          "troughMovePct": -3.913427901433897,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "VSSL",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "VSSL__T1",
+          "scripSymbol": "VSSL",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-06-10",
+          "entryPrice": 268.92,
+          "entryQty": 793,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-29",
+              "qty": 750,
+              "price": 278.36
+            },
+            {
+              "date": "2026-06-30",
+              "qty": 43,
+              "price": 279.8
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-30",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 20,
+          "realizedPnl": 7547.839999999998,
+          "unrealizedPnl": 0,
+          "peakMovePct": 7.3553473151866555,
+          "troughMovePct": -1.6064257028112428,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "VTL",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "VTL__T1",
+          "scripSymbol": "VTL",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-04-08",
+          "entryPrice": 554.02,
+          "entryQty": 336,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-05-22",
+              "qty": 168,
+              "price": 611.14
+            },
+            {
+              "date": "2026-06-15",
+              "qty": 168,
+              "price": 623.23
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-15",
+          "hitStatus": "HIT",
+          "hitDate": "2026-06-15",
+          "daysToHit": 68,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 68,
+          "realizedPnl": 21223.440000000006,
+          "unrealizedPnl": 0,
+          "peakMovePct": 15.122197754593692,
+          "troughMovePct": -1.546875564059047,
+          "splitAdjustFactor": 1
+        },
+        {
+          "id": "VTL__T2",
+          "scripSymbol": "VTL",
+          "exchange": "NSE",
+          "label": "Tranche 2",
+          "entryDate": "2026-06-09",
+          "entryPrice": 625.72,
+          "entryQty": 134,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-15",
+              "qty": 134,
+              "price": 623.23
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-15",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 6,
+          "realizedPnl": -333.6600000000012,
+          "unrealizedPnl": 0,
+          "peakMovePct": 1.9305759764750796,
+          "troughMovePct": -1.9609409959726376,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "WANBURY",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "WANBURY__T1",
+          "scripSymbol": "WANBURY",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-05",
+          "entryPrice": 253.32,
+          "entryQty": 1005,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-03",
+              "qty": 1005,
+              "price": 256.12
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-03",
+          "hitStatus": "HIT",
+          "hitDate": "2026-05-27",
+          "daysToHit": 22,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 29,
+          "realizedPnl": 2814.0000000000114,
+          "unrealizedPnl": 0,
+          "peakMovePct": 21.841939049423644,
+          "troughMovePct": -1.6658771514290183,
+          "splitAdjustFactor": 1
+        }
+      ]
+    },
+    {
+      "scripSymbol": "YATHARTH",
+      "exchange": "NSE",
+      "tranches": [
+        {
+          "id": "YATHARTH__T1",
+          "scripSymbol": "YATHARTH",
+          "exchange": "NSE",
+          "label": "Tranche 1",
+          "entryDate": "2026-05-25",
+          "entryPrice": 823.98,
+          "entryQty": 481,
+          "remainingQty": 0,
+          "exitEvents": [
+            {
+              "date": "2026-06-02",
+              "qty": 481,
+              "price": 784.15
+            }
+          ],
+          "status": "CLOSED",
+          "closedDate": "2026-06-02",
+          "hitStatus": "NOT_HIT",
+          "hitDate": null,
+          "daysToHit": null,
+          "currentLtp": null,
+          "currentMovePct": null,
+          "pctStillNeeded": null,
+          "daysHeld": 8,
+          "realizedPnl": -19158.23000000002,
+          "unrealizedPnl": 0,
+          "peakMovePct": -0.4162722396174767,
+          "troughMovePct": -3.778004320493211,
+          "splitAdjustFactor": 1
+        }
+      ]
+    }
+  ]
+}

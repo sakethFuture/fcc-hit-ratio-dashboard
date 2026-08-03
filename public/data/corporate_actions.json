@@ -1,0 +1,416 @@
+{
+  "ADVENZYMES.NS": [
+    {
+      "date": "2017-05-25",
+      "ratio": 5.0
+    }
+  ],
+  "ANUP.NS": [
+    {
+      "date": "2024-04-23",
+      "ratio": 2.0
+    }
+  ],
+  "APARINDS.NS": [
+    {
+      "date": "2007-01-11",
+      "ratio": 1.3333333333333333
+    }
+  ],
+  "APCOTEXIND.NS": [
+    {
+      "date": "2013-08-14",
+      "ratio": 2.0
+    },
+    {
+      "date": "2015-09-23",
+      "ratio": 2.0
+    },
+    {
+      "date": "2019-07-04",
+      "ratio": 2.5
+    }
+  ],
+  "ASIANTILES.NS": [
+    {
+      "date": "2020-11-09",
+      "ratio": 5.0
+    }
+  ],
+  "AUROPHARMA.NS": [
+    {
+      "date": "2003-10-23",
+      "ratio": 2.0
+    },
+    {
+      "date": "2011-02-10",
+      "ratio": 5.0
+    },
+    {
+      "date": "2015-07-20",
+      "ratio": 2.0
+    }
+  ],
+  "BANCOINDIA.NS": [
+    {
+      "date": "2007-08-30",
+      "ratio": 2.0
+    },
+    {
+      "date": "2007-11-23",
+      "ratio": 5.0
+    },
+    {
+      "date": "2024-12-30",
+      "ratio": 2.0
+    }
+  ],
+  "BORORENEW.NS": [
+    {
+      "date": "2018-08-02",
+      "ratio": 4.0
+    }
+  ],
+  "CERA.NS": [
+    {
+      "date": "2010-09-02",
+      "ratio": 2.0
+    }
+  ],
+  "CHOICEIN.NS": [
+    {
+      "date": "2022-09-22",
+      "ratio": 2.0
+    },
+    {
+      "date": "2024-02-20",
+      "ratio": 2.0
+    }
+  ],
+  "DSSL.NS": [
+    {
+      "date": "2011-11-03",
+      "ratio": 0.1
+    }
+  ],
+  "E2E.NS": [
+    {
+      "date": "2026-06-05",
+      "ratio": 10.0
+    }
+  ],
+  "FIEMIND.NS": [
+    {
+      "date": "2024-02-28",
+      "ratio": 2.0
+    }
+  ],
+  "GESHIP.NS": [
+    {
+      "date": "2006-10-16",
+      "ratio": 0.8
+    }
+  ],
+  "GMBREW.NS": [
+    {
+      "date": "2014-05-16",
+      "ratio": 1.25
+    },
+    {
+      "date": "2016-05-30",
+      "ratio": 1.25
+    },
+    {
+      "date": "2018-05-21",
+      "ratio": 1.25
+    },
+    {
+      "date": "2024-05-09",
+      "ratio": 1.25
+    },
+    {
+      "date": "2024-05-24",
+      "ratio": 1.25
+    }
+  ],
+  "GOLDIAM.NS": [
+    {
+      "date": "2022-03-28",
+      "ratio": 5.0
+    },
+    {
+      "date": "2026-07-10",
+      "ratio": 1.3333333333333333
+    }
+  ],
+  "GRAVITA.NS": [
+    {
+      "date": "2012-05-25",
+      "ratio": 5.0
+    }
+  ],
+  "HBLENGINE.NS": [
+    {
+      "date": "2009-11-24",
+      "ratio": 10.0
+    }
+  ],
+  "HIRECT.NS": [
+    {
+      "date": "2008-10-06",
+      "ratio": 2.0
+    },
+    {
+      "date": "2026-03-27",
+      "ratio": 2.0
+    }
+  ],
+  "INFOBEAN.NS": [
+    {
+      "date": "2026-02-27",
+      "ratio": 4.0
+    }
+  ],
+  "IPCALAB.NS": [
+    {
+      "date": "2005-01-28",
+      "ratio": 2.0
+    },
+    {
+      "date": "2010-03-22",
+      "ratio": 5.0
+    },
+    {
+      "date": "2022-01-10",
+      "ratio": 2.0
+    }
+  ],
+  "JAGSNPHARM.NS": [
+    {
+      "date": "2025-01-08",
+      "ratio": 2.5
+    }
+  ],
+  "JAMNAAUTO.NS": [
+    {
+      "date": "2015-12-03",
+      "ratio": 2.0
+    },
+    {
+      "date": "2017-10-05",
+      "ratio": 5.0
+    }
+  ],
+  "KAJARIACER.NS": [
+    {
+      "date": "2005-10-19",
+      "ratio": 5.0
+    },
+    {
+      "date": "2016-10-04",
+      "ratio": 2.0
+    }
+  ],
+  "KMEW.NS": [
+    {
+      "date": "2025-12-22",
+      "ratio": 2.0
+    }
+  ],
+  "KRISHANA.NS": [
+    {
+      "date": "2023-10-25",
+      "ratio": 2.0
+    },
+    {
+      "date": "2026-07-03",
+      "ratio": 5.0
+    }
+  ],
+  "MACPOWER.NS": [
+    {
+      "date": "2020-06-30",
+      "ratio": 1.02
+    }
+  ],
+  "MANORAMA.NS": [
+    {
+      "date": "2024-03-07",
+      "ratio": 5.0
+    }
+  ],
+  "MARKSANS.NS": [
+    {
+      "date": "2008-03-11",
+      "ratio": 10.0
+    }
+  ],
+  "MMFL.NS": [
+    {
+      "date": "2008-09-26",
+      "ratio": 2.0
+    },
+    {
+      "date": "2018-07-18",
+      "ratio": 2.0
+    },
+    {
+      "date": "2024-07-16",
+      "ratio": 2.0
+    }
+  ],
+  "NUVAMA.NS": [
+    {
+      "date": "2025-12-26",
+      "ratio": 5.0
+    }
+  ],
+  "ONEPOINT.NS": [
+    {
+      "date": "2019-04-24",
+      "ratio": 1.5
+    },
+    {
+      "date": "2022-01-13",
+      "ratio": 5.0
+    },
+    {
+      "date": "2022-01-18",
+      "ratio": 5.0
+    }
+  ],
+  "PARAS.NS": [
+    {
+      "date": "2025-07-04",
+      "ratio": 2.0
+    }
+  ],
+  "PITTIENG.NS": [
+    {
+      "date": "2015-04-16",
+      "ratio": 2.0
+    }
+  ],
+  "POCL.NS": [
+    {
+      "date": "2024-10-16",
+      "ratio": 2.0
+    },
+    {
+      "date": "2026-07-21",
+      "ratio": 2.5
+    }
+  ],
+  "PREMIERPOL.NS": [
+    {
+      "date": "2024-11-05",
+      "ratio": 5.0
+    }
+  ],
+  "PRICOLLTD.NS": [
+    {
+      "date": "2004-07-08",
+      "ratio": 2.0
+    }
+  ],
+  "REDINGTON.NS": [
+    {
+      "date": "2010-08-20",
+      "ratio": 5.0
+    },
+    {
+      "date": "2021-08-18",
+      "ratio": 2.0
+    }
+  ],
+  "RICOAUTO.NS": [
+    {
+      "date": "2005-03-11",
+      "ratio": 10.0
+    }
+  ],
+  "RKFORGE.NS": [
+    {
+      "date": "2022-03-14",
+      "ratio": 5.0
+    }
+  ],
+  "SENCO.NS": [
+    {
+      "date": "2025-01-31",
+      "ratio": 2.0
+    }
+  ],
+  "SIYSIL.NS": [
+    {
+      "date": "2006-10-19",
+      "ratio": 1.5
+    },
+    {
+      "date": "2017-10-25",
+      "ratio": 5.0
+    }
+  ],
+  "STEELCAS.NS": [
+    {
+      "date": "2025-08-29",
+      "ratio": 5.0
+    }
+  ],
+  "STLTECH.NS": [
+    {
+      "date": "2010-03-09",
+      "ratio": 2.5
+    }
+  ],
+  "TALBROSENG.BO": [
+    {
+      "date": "2017-10-12",
+      "ratio": 2.0
+    }
+  ],
+  "TANLA.NS": [
+    {
+      "date": "2008-05-02",
+      "ratio": 2.0
+    }
+  ],
+  "THYROCARE.NS": [
+    {
+      "date": "2025-11-28",
+      "ratio": 3.0
+    }
+  ],
+  "TIPSMUSIC.NS": [
+    {
+      "date": "2023-04-21",
+      "ratio": 10.0
+    }
+  ],
+  "VIMTALABS.NS": [
+    {
+      "date": "2025-06-13",
+      "ratio": 2.0
+    }
+  ],
+  "VSSL.NS": [
+    {
+      "date": "2023-05-19",
+      "ratio": 2.0
+    },
+    {
+      "date": "2023-05-26",
+      "ratio": 2.0
+    }
+  ],
+  "VTL.NS": [
+    {
+      "date": "2005-09-15",
+      "ratio": 1.5
+    },
+    {
+      "date": "2022-03-24",
+      "ratio": 5.0
+    }
+  ]
+}

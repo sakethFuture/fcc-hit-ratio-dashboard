@@ -1,0 +1,674 @@
+[
+  {
+    "scripSymbol": "ADVENZYMES",
+    "exchange": "NSE",
+    "yahooTicker": "ADVENZYMES.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "ALLDIGI",
+    "exchange": "NSE",
+    "yahooTicker": "ALLDIGI.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "AMBIKCO",
+    "exchange": "NSE",
+    "yahooTicker": "AMBIKCO.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "ANUP",
+    "exchange": "NSE",
+    "yahooTicker": "ANUP.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "APARINDS",
+    "exchange": "NSE",
+    "yahooTicker": "APARINDS.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "APCOTEXIND",
+    "exchange": "NSE",
+    "yahooTicker": "APCOTEXIND.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "ARFIN",
+    "exchange": "NSE",
+    "yahooTicker": "ARFIN.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "ASIANTILES",
+    "exchange": "NSE",
+    "yahooTicker": "ASIANTILES.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "AUROPHARMA",
+    "exchange": "NSE",
+    "yahooTicker": "AUROPHARMA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "AVANTEL",
+    "exchange": "NSE",
+    "yahooTicker": "AVANTEL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "BANCOINDIA",
+    "exchange": "NSE",
+    "yahooTicker": "BANCOINDIA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "BHARATSE",
+    "exchange": "NSE",
+    "yahooTicker": "BHARATSE.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "BORANA",
+    "exchange": "NSE",
+    "yahooTicker": "BORANA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "BORORENEW",
+    "exchange": "NSE",
+    "yahooTicker": "BORORENEW.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "CERA",
+    "exchange": "NSE",
+    "yahooTicker": "CERA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "CHOICEIN",
+    "exchange": "NSE",
+    "yahooTicker": "CHOICEIN.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "CONTROLPR",
+    "exchange": "NSE",
+    "yahooTicker": "CONTROLPR.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "CORDSCABLE",
+    "exchange": "NSE",
+    "yahooTicker": "CORDSCABLE.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "DATAPATTNS",
+    "exchange": "NSE",
+    "yahooTicker": "DATAPATTNS.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "DCBBANK",
+    "exchange": "NSE",
+    "yahooTicker": "DCBBANK.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "DECNGOLD",
+    "exchange": "NSE",
+    "yahooTicker": "DECNGOLD.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "DELHIVERY",
+    "exchange": "NSE",
+    "yahooTicker": "DELHIVERY.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "DLINKINDIA",
+    "exchange": "NSE",
+    "yahooTicker": "DLINKINDIA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "DSSL",
+    "exchange": "NSE",
+    "yahooTicker": "DSSL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "DYNAMATECH",
+    "exchange": "NSE",
+    "yahooTicker": "DYNAMATECH.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "E2E",
+    "exchange": "NSE",
+    "yahooTicker": "E2E.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "ENDURANCE",
+    "exchange": "NSE",
+    "yahooTicker": "ENDURANCE.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "ENTERO",
+    "exchange": "NSE",
+    "yahooTicker": "ENTERO.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "EUROPRATIK",
+    "exchange": "NSE",
+    "yahooTicker": "EUROPRATIK.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "FACT",
+    "exchange": "NSE",
+    "yahooTicker": "FACT.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "FIEMIND",
+    "exchange": "NSE",
+    "yahooTicker": "FIEMIND.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "FORCEMOT",
+    "exchange": "NSE",
+    "yahooTicker": "FORCEMOT.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "GESHIP",
+    "exchange": "NSE",
+    "yahooTicker": "GESHIP.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "GMBREW",
+    "exchange": "NSE",
+    "yahooTicker": "GMBREW.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "GOLDIAM",
+    "exchange": "NSE",
+    "yahooTicker": "GOLDIAM.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "GRAVITA",
+    "exchange": "NSE",
+    "yahooTicker": "GRAVITA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "GRWRHITECH",
+    "exchange": "NSE",
+    "yahooTicker": "GRWRHITECH.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "HBLENGINE",
+    "exchange": "NSE",
+    "yahooTicker": "HBLENGINE.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "HIRECT",
+    "exchange": "NSE",
+    "yahooTicker": "HIRECT.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "INDOTECH",
+    "exchange": "NSE",
+    "yahooTicker": "INDOTECH.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "INFOBEAN",
+    "exchange": "NSE",
+    "yahooTicker": "INFOBEAN.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "IPCALAB",
+    "exchange": "NSE",
+    "yahooTicker": "IPCALAB.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "JAGSNPHARM",
+    "exchange": "NSE",
+    "yahooTicker": "JAGSNPHARM.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "JAMNAAUTO",
+    "exchange": "NSE",
+    "yahooTicker": "JAMNAAUTO.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "JSFB",
+    "exchange": "NSE",
+    "yahooTicker": "JSFB.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "KAJARIACER",
+    "exchange": "NSE",
+    "yahooTicker": "KAJARIACER.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "KIRLOSBROS",
+    "exchange": "NSE",
+    "yahooTicker": "KIRLOSBROS.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "KMEW",
+    "exchange": "NSE",
+    "yahooTicker": "KMEW.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "KRISHANA",
+    "exchange": "NSE",
+    "yahooTicker": "KRISHANA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "KRN",
+    "exchange": "NSE",
+    "yahooTicker": "KRN.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "KSHINTL",
+    "exchange": "NSE",
+    "yahooTicker": "KSHINTL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "LIQUIDBEES",
+    "exchange": "NSE",
+    "yahooTicker": "LIQUIDBEES.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "MACPOWER",
+    "exchange": "NSE",
+    "yahooTicker": "MACPOWER.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "MANORAMA",
+    "exchange": "NSE",
+    "yahooTicker": "MANORAMA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "MARKSANS",
+    "exchange": "NSE",
+    "yahooTicker": "MARKSANS.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "MMFL",
+    "exchange": "NSE",
+    "yahooTicker": "MMFL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "MUTHOOTMF",
+    "exchange": "NSE",
+    "yahooTicker": "MUTHOOTMF.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "NILE",
+    "exchange": "NSE",
+    "yahooTicker": "NILE.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "NUVAMA",
+    "exchange": "NSE",
+    "yahooTicker": "NUVAMA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "ONEPOINT",
+    "exchange": "NSE",
+    "yahooTicker": "ONEPOINT.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "PARAS",
+    "exchange": "NSE",
+    "yahooTicker": "PARAS.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "PASUPTAC",
+    "exchange": "NSE",
+    "yahooTicker": "PASUPTAC.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "PITTIENG",
+    "exchange": "NSE",
+    "yahooTicker": "PITTIENG.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "PIXTRANS",
+    "exchange": "NSE",
+    "yahooTicker": "PIXTRANS.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "POCL",
+    "exchange": "NSE",
+    "yahooTicker": "POCL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "PRADPME",
+    "exchange": "NSE",
+    "yahooTicker": "PRADPME.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "PREMIERPOL",
+    "exchange": "NSE",
+    "yahooTicker": "PREMIERPOL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "PRICOLLTD",
+    "exchange": "NSE",
+    "yahooTicker": "PRICOLLTD.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "PRIVISCL",
+    "exchange": "NSE",
+    "yahooTicker": "PRIVISCL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "QPOWER",
+    "exchange": "NSE",
+    "yahooTicker": "QPOWER.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "REDINGTON",
+    "exchange": "NSE",
+    "yahooTicker": "REDINGTON.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "RICOAUTO",
+    "exchange": "NSE",
+    "yahooTicker": "RICOAUTO.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "RKFORGE",
+    "exchange": "NSE",
+    "yahooTicker": "RKFORGE.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "SAPPL",
+    "exchange": "BSE",
+    "yahooTicker": "SAPPL.BO",
+    "manualOverride": true,
+    "verified": true
+  },
+  {
+    "scripSymbol": "SENCO",
+    "exchange": "NSE",
+    "yahooTicker": "SENCO.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "SGFIN",
+    "exchange": "NSE",
+    "yahooTicker": "SGFIN.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "SHANTIGOLD",
+    "exchange": "NSE",
+    "yahooTicker": "SHANTIGOLD.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "SHYAMMETL",
+    "exchange": "NSE",
+    "yahooTicker": "SHYAMMETL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "SIYSIL",
+    "exchange": "NSE",
+    "yahooTicker": "SIYSIL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "SOBHA",
+    "exchange": "NSE",
+    "yahooTicker": "SOBHA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "STEELCAS",
+    "exchange": "NSE",
+    "yahooTicker": "STEELCAS.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "STLTECH",
+    "exchange": "NSE",
+    "yahooTicker": "STLTECH.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "SUDEEPPHRM",
+    "exchange": "NSE",
+    "yahooTicker": "SUDEEPPHRM.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "TALBROSENG",
+    "exchange": "BSE",
+    "yahooTicker": "TALBROSENG.BO",
+    "manualOverride": true,
+    "verified": true
+  },
+  {
+    "scripSymbol": "TANLA",
+    "exchange": "NSE",
+    "yahooTicker": "TANLA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "TATVA",
+    "exchange": "NSE",
+    "yahooTicker": "TATVA.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "THYROCARE",
+    "exchange": "NSE",
+    "yahooTicker": "THYROCARE.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "TIPSMUSIC",
+    "exchange": "NSE",
+    "yahooTicker": "TIPSMUSIC.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "UNIVCABLES",
+    "exchange": "NSE",
+    "yahooTicker": "UNIVCABLES.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "VENUSREM",
+    "exchange": "NSE",
+    "yahooTicker": "VENUSREM.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "VIMTALABS",
+    "exchange": "NSE",
+    "yahooTicker": "VIMTALABS.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "VIYASH",
+    "exchange": "NSE",
+    "yahooTicker": "VIYASH.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "VSSL",
+    "exchange": "NSE",
+    "yahooTicker": "VSSL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "VTL",
+    "exchange": "NSE",
+    "yahooTicker": "VTL.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "WANBURY",
+    "exchange": "NSE",
+    "yahooTicker": "WANBURY.NS",
+    "manualOverride": false,
+    "verified": true
+  },
+  {
+    "scripSymbol": "YATHARTH",
+    "exchange": "NSE",
+    "yahooTicker": "YATHARTH.NS",
+    "manualOverride": false,
+    "verified": true
+  }
+]
