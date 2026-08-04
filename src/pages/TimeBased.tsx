@@ -77,27 +77,15 @@ export function TimeBased() {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <div style={{ display: 'flex', gap: 6 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+      <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
         {GRANULARITIES.map((g) => (
           <button
             key={g.key}
+            className={`chip${granularity === g.key ? ' chip-active' : ''}`}
             onClick={() => {
               setGranularity(g.key);
               setSelectedBucket(null);
-            }}
-            style={{
-              fontSize: 11,
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              letterSpacing: '0.03em',
-              padding: '6px 12px',
-              borderRadius: 6,
-              border: `1px solid ${granularity === g.key ? 'var(--seq-400)' : 'var(--border)'}`,
-              background: granularity === g.key ? 'var(--seq-700)' : 'transparent',
-              color: granularity === g.key ? 'var(--text-primary)' : 'var(--text-muted)',
-              cursor: 'pointer',
-              transition: 'background var(--transition-fast), border-color var(--transition-fast)',
             }}
           >
             {g.label}
@@ -105,7 +93,7 @@ export function TimeBased() {
         ))}
       </div>
 
-      <div className="card" style={{ padding: '16px 16px 8px', height: 340 }}>
+      <div className="card" style={{ padding: 'var(--space-4) var(--space-4) var(--space-2)', height: 340 }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={buckets} margin={{ top: 24, right: 16, left: 0, bottom: 8 }}>
             <CartesianGrid vertical={false} stroke="var(--gridline)" />
@@ -206,15 +194,15 @@ export function TimeBased() {
       </div>
 
       {selected && (
-        <div className="card" style={{ padding: 14 }}>
+        <div className="card" style={{ padding: 'var(--space-4)' }}>
           <div
             style={{
               fontSize: 12,
               fontWeight: 700,
               textTransform: 'uppercase',
-              letterSpacing: '0.04em',
+              letterSpacing: '0.05em',
               color: 'var(--text-secondary)',
-              marginBottom: 10,
+              marginBottom: 'var(--space-3)',
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
@@ -223,18 +211,7 @@ export function TimeBased() {
             <span>
               {selected.bucket} — {selected.total} tranche{selected.total === 1 ? '' : 's'}, {selected.hitPct.toFixed(1)}% hit
             </span>
-            <button
-              onClick={() => setSelectedBucket(null)}
-              style={{
-                background: 'none',
-                border: '1px solid var(--border)',
-                borderRadius: 5,
-                color: 'var(--text-muted)',
-                fontSize: 11,
-                padding: '4px 8px',
-                cursor: 'pointer',
-              }}
-            >
+            <button className="btn" onClick={() => setSelectedBucket(null)}>
               Close
             </button>
           </div>
@@ -265,7 +242,7 @@ export function TimeBased() {
                       {fmtPct(t.peakMovePct)}
                     </td>
                     <td>
-                      <StatusBadge status={t.hitStatus} />
+                      <StatusBadge tranche={t} />
                     </td>
                   </tr>
                 ))}

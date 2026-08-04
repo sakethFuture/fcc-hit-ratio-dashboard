@@ -13,10 +13,10 @@ function fmtPct(n: number | null): string {
   return `${sign}${n.toFixed(1)}%`;
 }
 
-function hitPctColor(pct: number): string {
-  if (pct >= 50) return 'var(--status-good)';
-  if (pct >= 30) return 'var(--status-warning)';
-  return 'var(--status-critical)';
+function hitPctBand(pct: number): { color: string; bg: string } {
+  if (pct >= 50) return { color: 'var(--status-good)', bg: 'var(--status-good-bg)' };
+  if (pct >= 30) return { color: 'var(--status-warning)', bg: 'var(--status-warning-bg)' };
+  return { color: 'var(--status-critical)', bg: 'var(--status-critical-bg)' };
 }
 
 export function StockWise() {
@@ -28,7 +28,7 @@ export function StockWise() {
   const scripCards = useMemo(() => {
     if (!ledger) return [];
     const cards = ledger.scrips.map((s) => {
-      const stats = computeHitRatio(s.tranches, true);
+      const stats = computeHitRatio(s.tranches);
       const mostRecent = s.tranches.reduce((max, t) => (t.entryDate > max ? t.entryDate : max), '');
       return { scrip: s, stats, mostRecent };
     });
@@ -57,7 +57,7 @@ export function StockWise() {
 
   return (
     <div>
-      <div style={{ display: 'flex', gap: 10, marginBottom: 12, alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-3)', alignItems: 'center' }}>
         <input
           placeholder="Filter by scrip…"
           value={filter}
@@ -65,8 +65,8 @@ export function StockWise() {
           style={{
             background: 'var(--surface-2)',
             border: '1px solid var(--border)',
-            borderRadius: 6,
-            padding: '7px 10px',
+            borderRadius: 7,
+            padding: 'var(--space-2) var(--space-3)',
             fontSize: 12,
             width: 220,
           }}
@@ -77,8 +77,8 @@ export function StockWise() {
           style={{
             background: 'var(--surface-2)',
             border: '1px solid var(--border)',
-            borderRadius: 6,
-            padding: '7px 10px',
+            borderRadius: 7,
+            padding: 'var(--space-2) var(--space-3)',
             fontSize: 12,
           }}
         >
@@ -89,7 +89,7 @@ export function StockWise() {
         <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>{scripCards.length} scrips</span>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
         {scripCards.map(({ scrip, stats }, idx) => {
           const isOpen = expanded.has(scrip.scripSymbol);
           return (
@@ -100,11 +100,11 @@ export function StockWise() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  padding: '10px 16px',
-                  gap: 16,
+                  padding: 'var(--space-3) var(--space-4)',
+                  gap: 'var(--space-4)',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', minWidth: 0 }}>
                   <span style={{ fontSize: 12, color: 'var(--text-muted)', width: 10 }}>
                     {isOpen ? '▾' : '▸'}
                   </span>
@@ -116,7 +116,7 @@ export function StockWise() {
                   </span>
                   <HitPatternSparkline tranches={scrip.tranches} />
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 18, flexShrink: 0 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', flexShrink: 0 }}>
                   <span style={{ fontSize: 11.5, color: 'var(--text-muted)', display: 'flex', alignItems: 'center' }}>
                     {scrip.tranches.length} tranche{scrip.tranches.length === 1 ? '' : 's'}
                     {idx === 0 && (
@@ -126,14 +126,18 @@ export function StockWise() {
                   <span
                     className="mono"
                     style={{
-                      fontSize: 15,
+                      fontSize: 12.5,
                       fontWeight: 800,
-                      color: stats.total === 0 ? 'var(--text-muted)' : hitPctColor(stats.hitPct),
+                      color: hitPctBand(stats.hitPct).color,
+                      background: hitPctBand(stats.hitPct).bg,
+                      border: `1px solid ${hitPctBand(stats.hitPct).color}`,
+                      borderRadius: 999,
+                      padding: 'var(--space-1) var(--space-3)',
                       minWidth: 76,
-                      textAlign: 'right',
+                      textAlign: 'center',
                     }}
                   >
-                    {stats.total === 0 ? 'pending' : `${stats.hitPct.toFixed(0)}% hit`}
+                    {stats.hitPct.toFixed(0)}% HIT
                   </span>
                 </div>
               </div>
@@ -183,7 +187,7 @@ export function StockWise() {
                           </td>
                           <td className="mono">{t.daysToHit ?? '—'}</td>
                           <td>
-                            <StatusBadge status={t.hitStatus} />
+                            <StatusBadge tranche={t} />
                           </td>
                         </tr>
                       ))}

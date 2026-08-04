@@ -1,17 +1,31 @@
 :root {
   color-scheme: dark;
 
-  /* Chart chrome & ink — dark, from the validated reference palette */
-  --surface-0: #0d0d0d; /* page plane */
-  --surface-1: #1a1a19; /* card / chart surface */
-  --surface-2: #202020; /* raised card */
-  --surface-3: #262625; /* hover/active */
-  --text-primary: #ffffff;
-  --text-secondary: #c3c2b7;
-  --text-muted: #898781;
-  --gridline: #2c2c2a;
-  --baseline: #383835;
-  --border: rgba(255, 255, 255, 0.1);
+  /* Spacing scale — 4px base unit. Every gap/padding in the app should be a
+     multiple of this; it's what makes a dense layout read as "designed"
+     instead of "eyeballed." */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+
+  /* Chrome & ink — a deeper near-black base than the reference palette's
+     default, for more contrast against elevated card surfaces */
+  --surface-0: #08090a; /* page plane */
+  --surface-1: #16181a; /* card / chart surface */
+  --surface-2: #1e2124; /* raised / hovered card */
+  --surface-3: #262a2e; /* active / pressed */
+  --text-primary: #f5f6f7;
+  --text-secondary: #a8adb4;
+  --text-muted: #6b7178;
+  --gridline: #24272a;
+  --baseline: #34383c;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
 
   /* Categorical (fixed order, from palette.md dark column) */
   --series-1: #3987e5; /* blue */
@@ -31,25 +45,38 @@
   --seq-600: #184f95;
   --seq-700: #0d366b;
 
-  /* Status (fixed, never themed) */
-  --status-good: #0ca30c;
-  --status-warning: #fab219;
-  --status-serious: #ec835a;
-  --status-critical: #d03b3b;
+  /* Status — fixed, never themed. Saturated enough to glow, still passes
+     contrast on the dark surface. */
+  --status-good: #17c964;
+  --status-good-bg: rgba(23, 201, 100, 0.12);
+  --status-warning: #f5a524;
+  --status-warning-bg: rgba(245, 165, 36, 0.12);
+  --status-critical: #f5455c;
+  --status-critical-bg: rgba(245, 69, 92, 0.12);
+
+  --glow-good: 0 0 0 1px rgba(23, 201, 100, 0.35), 0 0 12px -2px rgba(23, 201, 100, 0.45);
+  --glow-critical: 0 0 0 1px rgba(245, 69, 92, 0.35), 0 0 12px -2px rgba(245, 69, 92, 0.45);
+  --glow-warning: 0 0 0 1px rgba(245, 165, 36, 0.35), 0 0 12px -2px rgba(245, 165, 36, 0.45);
 
   --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Consolas, monospace;
 
-  /* Elevation — subtle glow + shadow so cards separate from the near-black page plane */
-  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
-  --shadow-card-hover: 0 2px 4px rgba(0, 0, 0, 0.5), 0 12px 32px -12px rgba(0, 0, 0, 0.7);
-  --ring-good: 0 0 0 1px rgba(12, 163, 12, 0.25);
-  --ring-critical: 0 0 0 1px rgba(208, 59, 59, 0.25);
-  --transition-fast: 120ms cubic-bezier(0.2, 0, 0, 1);
+  /* Elevation — layered shadow + faint top highlight so cards read as
+     physical surfaces raised off the page plane, not flat rectangles */
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 1px 2px rgba(0, 0, 0, 0.5),
+    0 12px 28px -14px rgba(0, 0, 0, 0.75);
+  --shadow-card-hover: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 2px 4px rgba(0, 0, 0, 0.55),
+    0 18px 40px -16px rgba(0, 0, 0, 0.85);
+  --ring-good: 0 0 0 1px rgba(23, 201, 100, 0.25);
+  --ring-critical: 0 0 0 1px rgba(245, 69, 92, 0.25);
+  --transition-fast: 130ms cubic-bezier(0.2, 0, 0, 1);
+  --transition-med: 220ms cubic-bezier(0.2, 0, 0, 1);
 }
 
 .card {
-  background: var(--surface-1);
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0) 45%),
+    var(--surface-1);
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow-card);
@@ -58,11 +85,11 @@
 .clickable {
   cursor: pointer;
   transition: background var(--transition-fast), border-color var(--transition-fast),
-    box-shadow var(--transition-fast), transform var(--transition-fast);
+    box-shadow var(--transition-med), transform var(--transition-fast);
 }
 
 .clickable:hover {
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: var(--border-strong);
   box-shadow: var(--shadow-card-hover);
 }
 
@@ -98,7 +125,7 @@ table {
 th,
 td {
   text-align: left;
-  padding: 6px 10px;
+  padding: var(--space-2) var(--space-3);
   border-bottom: 1px solid var(--gridline);
   white-space: nowrap;
 }
@@ -106,9 +133,9 @@ td {
 th {
   color: var(--text-muted);
   font-weight: 600;
-  font-size: 11px;
+  font-size: 10.5px;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   position: sticky;
   top: 0;
   background: var(--surface-1);
@@ -133,6 +160,16 @@ select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--seq-400);
+  outline-offset: 1px;
 }
 
 ::-webkit-scrollbar {
@@ -145,6 +182,75 @@ select {
 ::-webkit-scrollbar-thumb {
   background: var(--surface-3);
   border-radius: 6px;
+}
+
+.nav-link {
+  padding: var(--space-3) var(--space-4);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--text-secondary);
+}
+
+.nav-link.active-tab {
+  color: var(--text-primary);
+  border-bottom-color: var(--seq-400);
+}
+
+.btn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.btn:hover {
+  background: var(--surface-3);
+  border-color: var(--border-strong);
+}
+
+.chip {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.chip:hover {
+  color: var(--text-secondary);
+  border-color: var(--border-strong);
+  background: var(--surface-2);
+}
+
+.chip.chip-active {
+  border-color: var(--seq-400);
+  background: var(--seq-700);
+  color: var(--text-primary);
+}
+
+.chip.chip-active:hover {
+  background: var(--seq-700);
+  color: var(--text-primary);
 }
 
 .mono {

@@ -151,11 +151,11 @@ export function UploadPanel() {
         style={{
           border: `2px dashed ${dragOver ? 'var(--seq-400)' : 'var(--border)'}`,
           borderRadius: 10,
-          padding: '28px 20px',
+          padding: 'var(--space-7) var(--space-5)',
           textAlign: 'center',
           cursor: 'pointer',
           background: dragOver ? 'var(--surface-2)' : 'var(--surface-1)',
-          transition: 'background 0.15s, border-color 0.15s',
+          transition: 'background var(--transition-med), border-color var(--transition-med)',
         }}
       >
         <input

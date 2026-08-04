@@ -16,33 +16,36 @@ export function allTranches(ledger: Ledger | null): Tranche[] {
   return ledger.scrips.flatMap((s) => s.tranches);
 }
 
+/**
+ * Binary hit test — the one place "did this tranche hit?" is decided.
+ * HIT and HIT_RUNNING both mean the price touched +15% at some point
+ * (whether or not shares are still held); everything else — NOT_HIT
+ * (closed, never hit) and ACTIVE (still open, hasn't hit yet) — is "not hit".
+ * There is no third bucket: an undecided open position is provisionally
+ * "not hit" until it either hits or gets exited without hitting.
+ */
+export function isHit(t: Tranche): boolean {
+  return t.hitStatus === 'HIT' || t.hitStatus === 'HIT_RUNNING';
+}
+
 export interface HitRatioStats {
   total: number;
   hit: number;
   notHit: number;
-  active: number;
-  hitPct: number; // over `total` as passed in
+  hitPct: number;
 }
 
 /**
- * Single source of truth for hit-ratio rollups (Overview, Stock-wise, Time-based
- * all call this — never recompute hit/not-hit counts locally).
- *
- * "Finished only" (closedOnly=true) means "outcome decided" — HIT and
- * HIT_RUNNING both count as decided (the price already touched +15%,
- * regardless of whether shares are still held), so only ACTIVE (still open
- * AND never hit) is excluded. Whether a tranche is still open is irrelevant
- * to hit/not-hit; only whether price ever reached the threshold matters.
+ * Single source of truth for hit-ratio rollups — Overview, Stock-wise, and
+ * Time-based all call this; never recompute hit/not-hit counts locally.
+ * total is always every tranche passed in — no exclusion bucket.
  */
-export function computeHitRatio(tranches: Tranche[], closedOnly: boolean): HitRatioStats {
-  const pool = closedOnly ? tranches.filter((t) => t.hitStatus !== 'ACTIVE') : tranches;
+export function computeHitRatio(tranches: Tranche[]): HitRatioStats {
+  const total = tranches.length;
+  const hit = tranches.filter(isHit).length;
+  const notHit = total - hit;
 
-  const hit = pool.filter((t) => t.hitStatus === 'HIT' || t.hitStatus === 'HIT_RUNNING').length;
-  const notHit = pool.filter((t) => t.hitStatus === 'NOT_HIT').length;
-  const active = pool.filter((t) => t.hitStatus === 'ACTIVE').length;
-  const total = pool.length;
-
-  return { total, hit, notHit, active, hitPct: total > 0 ? (hit / total) * 100 : 0 };
+  return { total, hit, notHit, hitPct: total > 0 ? (hit / total) * 100 : 0 };
 }
 
 export interface PnlSummary {
@@ -64,15 +67,16 @@ export function trancheMovePct(t: Tranche): number | null {
 
 export function topHits(tranches: Tranche[], n: number): Tranche[] {
   return tranches
-    .filter((t) => t.hitStatus === 'HIT' || t.hitStatus === 'HIT_RUNNING')
+    .filter(isHit)
     .sort((a, b) => (b.peakMovePct ?? 0) - (a.peakMovePct ?? 0))
     .slice(0, n);
 }
 
-/** Ranked by worst drawdown (trough move from entry) among fully closed, never-hit tranches. */
+/** Ranked by worst drawdown (trough move from entry) among all not-hit tranches — closed and
+ * still-open-but-undecided alike, consistent with the binary hit/not-hit rule. */
 export function worstNotHits(tranches: Tranche[], n: number): Tranche[] {
   return tranches
-    .filter((t) => t.hitStatus === 'NOT_HIT')
+    .filter((t) => !isHit(t))
     .sort((a, b) => (a.troughMovePct ?? 0) - (b.troughMovePct ?? 0))
     .slice(0, n);
 }
@@ -88,7 +92,7 @@ export interface ScripHitRatio {
 export function perScripHitRatio(ledger: Ledger | null): ScripHitRatio[] {
   if (!ledger) return [];
   return ledger.scrips.map((s) => {
-    const stats = computeHitRatio(s.tranches, true);
+    const stats = computeHitRatio(s.tranches);
     const mostRecent = s.tranches.reduce(
       (max, t) => (t.entryDate > max ? t.entryDate : max),
       '',
@@ -179,7 +183,7 @@ export function bucketHitRatio(
 
   return allKeys.map((bucket) => {
     const list = map.get(bucket) ?? [];
-    const stats = computeHitRatio(list, true);
+    const stats = computeHitRatio(list);
     return { bucket, total: list.length, hit: stats.hit, hitPct: stats.hitPct, tranches: list };
   });
 }

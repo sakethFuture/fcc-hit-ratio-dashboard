@@ -1,13 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDashboardStore } from '../store/useDashboardStore';
-import {
-  allTranches,
-  computeHitRatio,
-  computePnl,
-  topHits,
-  worstNotHits,
-} from '../lib/aggregates';
+import { allTranches, computeHitRatio, computePnl, topHits, worstNotHits } from '../lib/aggregates';
 import { StatTile } from '../components/StatTile';
 import { HitRatioMeter } from '../components/HitRatioMeter';
 import { StatusBadge } from '../components/StatusBadge';
@@ -28,25 +22,23 @@ function fmtPct(n: number | null): string {
 export function Overview() {
   const navigate = useNavigate();
   const ledger = useDashboardStore((s) => s.ledger);
-  const [closedOnly, setClosedOnly] = useState(true);
 
   const tranches = useMemo(() => allTranches(ledger), [ledger]);
-  const stats = useMemo(() => computeHitRatio(tranches, closedOnly), [tranches, closedOnly]);
-  const allTimeStats = useMemo(() => computeHitRatio(tranches, false), [tranches]);
+  const stats = useMemo(() => computeHitRatio(tranches), [tranches]);
   const pnl = useMemo(() => computePnl(tranches), [tranches]);
   const best = useMemo(() => topHits(tranches, 5), [tranches]);
   const worst = useMemo(() => worstNotHits(tranches, 5), [tranches]);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-      <section style={{ display: 'flex', gap: 18, alignItems: 'stretch', flexWrap: 'wrap' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-5)' }}>
+      <section style={{ display: 'flex', gap: 'var(--space-5)', alignItems: 'stretch', flexWrap: 'wrap' }}>
         <div
           className="card"
           style={{
-            padding: '16px 22px',
+            padding: 'var(--space-5) var(--space-6)',
             display: 'flex',
             alignItems: 'center',
-            gap: 16,
+            gap: 'var(--space-4)',
           }}
         >
           <HitRatioMeter
@@ -57,26 +49,30 @@ export function Overview() {
             onClick={() => navigate('/time')}
           />
           <div>
-            <div style={{ display: 'flex', gap: 6, marginBottom: 8, flexWrap: 'wrap' }}>
-              <ToggleButton active={closedOnly} onClick={() => setClosedOnly(true)}>
-                Finished trades only
-                <InfoTip text="Only counts tranches you've fully exited. Still-open positions aren't included yet since we don't know how they'll turn out." />
-              </ToggleButton>
-              <ToggleButton active={!closedOnly} onClick={() => setClosedOnly(false)}>
-                Every trade
-                <InfoTip text="Counts every tranche ever entered, including ones still open right now." />
-              </ToggleButton>
+            <div
+              style={{
+                fontSize: 10.5,
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                color: 'var(--text-muted)',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              Hit Ratio
+              <InfoTip text="Hit means the stock's closing price reached at least 15% above what we paid, at any point since we entered — whether or not we actually sold at that point. A tranche is either Hit or Not Hit; there's no in-between bucket." />
             </div>
-            <div style={{ fontSize: 11.5, color: 'var(--text-muted)' }}>
-              Every trade: <span className="mono" style={{ color: 'var(--text-secondary)' }}>{allTimeStats.hitPct.toFixed(1)}%</span>
+            <div style={{ fontSize: 11.5, color: 'var(--text-secondary)', marginTop: 'var(--space-2)' }}>
+              {stats.hit} hit · {stats.notHit} not hit
             </div>
-            <div style={{ fontSize: 10.5, color: 'var(--text-muted)', marginTop: 8 }}>
+            <div style={{ fontSize: 10.5, color: 'var(--text-muted)', marginTop: 'var(--space-4)' }}>
               Click the gauge for hit ratio over time →
             </div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', flex: 1 }}>
+        <div style={{ display: 'flex', gap: 'var(--space-3)', flexWrap: 'wrap', flex: 1 }}>
           <StatTile
             label={
               <>
@@ -84,20 +80,10 @@ export function Overview() {
                 <InfoTip text="A tranche is one buy — every time you add to a position, even without selling first, it's tracked as its own separate trade with its own entry date." />
               </>
             }
-            value={allTimeStats.total}
+            value={stats.total}
           />
-          <StatTile
-            label={
-              <>
-                Hit
-                <InfoTip text="Hit means the stock's closing price reached at least 15% above what we paid, at any point since we entered — whether or not we actually sold at that point." />
-              </>
-            }
-            value={allTimeStats.hit}
-            tone="good"
-          />
-          <StatTile label="Not Hit" value={allTimeStats.notHit} tone="critical" />
-          <StatTile label="Active / Pending" value={allTimeStats.active} tone="warning" />
+          <StatTile label="Hit" value={stats.hit} tone="good" />
+          <StatTile label="Not Hit" value={stats.notHit} tone="critical" />
           <StatTile
             label="Realized P&L"
             value={fmtMoney(pnl.realized)}
@@ -111,7 +97,7 @@ export function Overview() {
         </div>
       </section>
 
-      <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+      <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-4)' }}>
         <RankedList title="Top 5 Hits" rows={best} kind="hit" />
         <RankedList title="Top 5 Not-Hits (worst drawdown)" rows={worst} kind="not_hit" />
       </section>
@@ -121,9 +107,9 @@ export function Overview() {
           style={{
             fontSize: 13,
             textTransform: 'uppercase',
-            letterSpacing: '0.05em',
+            letterSpacing: '0.06em',
             color: 'var(--text-secondary)',
-            marginBottom: 8,
+            marginBottom: 'var(--space-2)',
             fontWeight: 700,
           }}
         >
@@ -132,39 +118,6 @@ export function Overview() {
         <ActiveFolioTable tranches={tranches} />
       </section>
     </div>
-  );
-}
-
-function ToggleButton({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        fontSize: 11,
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        letterSpacing: '0.03em',
-        padding: '6px 10px',
-        borderRadius: 6,
-        border: `1px solid ${active ? 'var(--seq-400)' : 'var(--border)'}`,
-        background: active ? 'var(--seq-700)' : 'transparent',
-        color: active ? 'var(--text-primary)' : 'var(--text-muted)',
-        cursor: 'pointer',
-        transition: 'background var(--transition-fast), border-color var(--transition-fast)',
-      }}
-    >
-      {children}
-    </button>
   );
 }
 
@@ -178,15 +131,15 @@ function RankedList({
   kind: 'hit' | 'not_hit';
 }) {
   return (
-    <div className="card" style={{ padding: 14 }}>
+    <div className="card" style={{ padding: 'var(--space-4)' }}>
       <div
         style={{
           fontSize: 11.5,
           fontWeight: 700,
           textTransform: 'uppercase',
-          letterSpacing: '0.04em',
+          letterSpacing: '0.05em',
           color: 'var(--text-secondary)',
-          marginBottom: 8,
+          marginBottom: 'var(--space-2)',
         }}
       >
         {title}
@@ -223,7 +176,7 @@ function RankedList({
                   {fmtPct(t.peakMovePct)}
                 </td>
                 <td>
-                  <StatusBadge status={t.hitStatus} />
+                  <StatusBadge tranche={t} />
                 </td>
               </tr>
             ))}

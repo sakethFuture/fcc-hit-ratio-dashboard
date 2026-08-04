@@ -15,14 +15,11 @@ export function ActiveFolioTable({ tranches }: { tranches: Tranche[] }) {
   const [sortKey, setSortKey] = useState<SortKey>('pctStillNeeded');
   const [sortDir, setSortDir] = useState<1 | -1>(1);
 
-  const active = useMemo(
-    () => tranches.filter((t) => t.hitStatus === 'ACTIVE' || t.hitStatus === 'HIT_RUNNING'),
-    [tranches],
-  );
+  const openPositions = useMemo(() => tranches.filter((t) => t.remainingQty > 0), [tranches]);
 
   const filtered = useMemo(
-    () => active.filter((t) => t.scripSymbol.toLowerCase().includes(filter.toLowerCase())),
-    [active, filter],
+    () => openPositions.filter((t) => t.scripSymbol.toLowerCase().includes(filter.toLowerCase())),
+    [openPositions, filter],
   );
 
   const sorted = useMemo(() => {
@@ -61,7 +58,12 @@ export function ActiveFolioTable({ tranches }: { tranches: Tranche[] }) {
 
   return (
     <div className="card">
-      <div style={{ padding: '9px 14px', borderBottom: '1px solid var(--border)' }}>
+      <div
+        style={{
+          padding: 'var(--space-2) var(--space-4)',
+          borderBottom: '1px solid var(--border)',
+        }}
+      >
         <input
           placeholder="Filter by scrip…"
           value={filter}
@@ -70,12 +72,12 @@ export function ActiveFolioTable({ tranches }: { tranches: Tranche[] }) {
             background: 'var(--surface-2)',
             border: '1px solid var(--border)',
             borderRadius: 6,
-            padding: '6px 10px',
+            padding: 'var(--space-2) var(--space-3)',
             fontSize: 12,
             width: 220,
           }}
         />
-        <span style={{ marginLeft: 12, fontSize: 11.5, color: 'var(--text-muted)' }}>
+        <span style={{ marginLeft: 'var(--space-3)', fontSize: 11.5, color: 'var(--text-muted)' }}>
           {sorted.length} open position{sorted.length === 1 ? '' : 's'}
         </span>
       </div>
@@ -114,7 +116,7 @@ export function ActiveFolioTable({ tranches }: { tranches: Tranche[] }) {
                 <td className="mono">{fmtPct(t.pctStillNeeded)}</td>
                 <td className="mono">{t.daysHeld ?? '—'}</td>
                 <td>
-                  <StatusBadge status={t.hitStatus} />
+                  <StatusBadge tranche={t} />
                 </td>
               </tr>
             ))}
