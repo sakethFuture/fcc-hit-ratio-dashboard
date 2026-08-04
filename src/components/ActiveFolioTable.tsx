@@ -50,15 +50,18 @@ export function ActiveFolioTable({ tranches }: { tranches: Tranche[] }) {
   };
 
   const th = (key: SortKey, label: string) => (
-    <th style={{ cursor: 'pointer' }} onClick={() => setSort(key)}>
+    <th
+      style={{ cursor: 'pointer', color: sortKey === key ? 'var(--text-secondary)' : undefined }}
+      onClick={() => setSort(key)}
+    >
       {label}
       {sortKey === key ? (sortDir === 1 ? ' ▲' : ' ▼') : ''}
     </th>
   );
 
   return (
-    <div style={{ background: 'var(--surface-1)', border: '1px solid var(--border)', borderRadius: 8 }}>
-      <div style={{ padding: '10px 14px', borderBottom: '1px solid var(--border)' }}>
+    <div className="card">
+      <div style={{ padding: '9px 14px', borderBottom: '1px solid var(--border)' }}>
         <input
           placeholder="Filter by scrip…"
           value={filter}
@@ -66,13 +69,13 @@ export function ActiveFolioTable({ tranches }: { tranches: Tranche[] }) {
           style={{
             background: 'var(--surface-2)',
             border: '1px solid var(--border)',
-            borderRadius: 5,
+            borderRadius: 6,
             padding: '6px 10px',
             fontSize: 12,
             width: 220,
           }}
         />
-        <span style={{ marginLeft: 12, fontSize: 12, color: 'var(--text-muted)' }}>
+        <span style={{ marginLeft: 12, fontSize: 11.5, color: 'var(--text-muted)' }}>
           {sorted.length} open position{sorted.length === 1 ? '' : 's'}
         </span>
       </div>
@@ -94,7 +97,7 @@ export function ActiveFolioTable({ tranches }: { tranches: Tranche[] }) {
           <tbody>
             {sorted.map((t) => (
               <tr key={t.id}>
-                <td>{t.scripSymbol}</td>
+                <td style={{ fontWeight: 600 }}>{t.scripSymbol}</td>
                 <td className="muted">{t.label}</td>
                 <td>{t.entryDate}</td>
                 <td className="mono">{t.entryPrice.toFixed(2)}</td>

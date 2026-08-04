@@ -1,3 +1,14 @@
+import {
+  eachDayOfInterval,
+  eachMonthOfInterval,
+  eachQuarterOfInterval,
+  eachWeekOfInterval,
+  eachYearOfInterval,
+  format,
+  getISOWeek,
+  getISOWeekYear,
+  parseISO,
+} from 'date-fns';
 import type { Ledger, Tranche } from '../types';
 
 export function allTranches(ledger: Ledger | null): Tranche[] {
@@ -13,10 +24,18 @@ export interface HitRatioStats {
   hitPct: number; // over `total` as passed in
 }
 
+/**
+ * Single source of truth for hit-ratio rollups (Overview, Stock-wise, Time-based
+ * all call this — never recompute hit/not-hit counts locally).
+ *
+ * "Finished only" (closedOnly=true) means "outcome decided" — HIT and
+ * HIT_RUNNING both count as decided (the price already touched +15%,
+ * regardless of whether shares are still held), so only ACTIVE (still open
+ * AND never hit) is excluded. Whether a tranche is still open is irrelevant
+ * to hit/not-hit; only whether price ever reached the threshold matters.
+ */
 export function computeHitRatio(tranches: Tranche[], closedOnly: boolean): HitRatioStats {
-  const pool = closedOnly
-    ? tranches.filter((t) => t.hitStatus === 'HIT' || t.hitStatus === 'NOT_HIT')
-    : tranches;
+  const pool = closedOnly ? tranches.filter((t) => t.hitStatus !== 'ACTIVE') : tranches;
 
   const hit = pool.filter((t) => t.hitStatus === 'HIT' || t.hitStatus === 'HIT_RUNNING').length;
   const notHit = pool.filter((t) => t.hitStatus === 'NOT_HIT').length;
@@ -84,13 +103,19 @@ export function perScripHitRatio(ledger: Ledger | null): ScripHitRatio[] {
   });
 }
 
-export type BucketGranularity = 'daily' | 'monthly' | 'quarterly' | 'yearly';
+export type BucketGranularity = 'daily' | 'weekly' | 'monthly' | 'quarterly' | 'yearly';
 
-function bucketKey(dateIso: string, granularity: BucketGranularity): string {
+export function bucketKey(dateIso: string, granularity: BucketGranularity): string {
   const [y, m] = dateIso.split('-');
   switch (granularity) {
     case 'daily':
       return dateIso;
+    case 'weekly': {
+      const d = parseISO(dateIso);
+      const wy = getISOWeekYear(d);
+      const w = String(getISOWeek(d)).padStart(2, '0');
+      return `${wy}-W${w}`;
+    }
     case 'monthly':
       return `${y}-${m}`;
     case 'quarterly':
@@ -105,12 +130,42 @@ export interface TimeBucketStat {
   total: number;
   hit: number;
   hitPct: number;
+  tranches: Tranche[];
+}
+
+/** Every bucket key between the earliest and latest entry date, inclusive — so
+ * a period with zero tranches still renders as an explicit (muted) bar instead
+ * of silently disappearing from the axis. */
+function allBucketKeysInRange(minIso: string, maxIso: string, granularity: BucketGranularity): string[] {
+  const start = parseISO(minIso);
+  const end = parseISO(maxIso);
+  let dates: Date[];
+  switch (granularity) {
+    case 'daily':
+      dates = eachDayOfInterval({ start, end });
+      break;
+    case 'weekly':
+      dates = eachWeekOfInterval({ start, end }, { weekStartsOn: 1 });
+      break;
+    case 'monthly':
+      dates = eachMonthOfInterval({ start, end });
+      break;
+    case 'quarterly':
+      dates = eachQuarterOfInterval({ start, end });
+      break;
+    case 'yearly':
+      dates = eachYearOfInterval({ start, end });
+      break;
+  }
+  return dates.map((d) => bucketKey(format(d, 'yyyy-MM-dd'), granularity));
 }
 
 export function bucketHitRatio(
   tranches: Tranche[],
   granularity: BucketGranularity,
 ): TimeBucketStat[] {
+  if (tranches.length === 0) return [];
+
   const map = new Map<string, Tranche[]>();
   for (const t of tranches) {
     const key = bucketKey(t.entryDate, granularity);
@@ -119,10 +174,12 @@ export function bucketHitRatio(
     map.set(key, list);
   }
 
-  return [...map.entries()]
-    .map(([bucket, list]) => {
-      const stats = computeHitRatio(list, true);
-      return { bucket, total: list.length, hit: stats.hit, hitPct: stats.hitPct };
-    })
-    .sort((a, b) => (a.bucket < b.bucket ? -1 : 1));
+  const entryDates = tranches.map((t) => t.entryDate).sort();
+  const allKeys = allBucketKeysInRange(entryDates[0], entryDates.at(-1)!, granularity);
+
+  return allKeys.map((bucket) => {
+    const list = map.get(bucket) ?? [];
+    const stats = computeHitRatio(list, true);
+    return { bucket, total: list.length, hit: stats.hit, hitPct: stats.hitPct, tranches: list };
+  });
 }

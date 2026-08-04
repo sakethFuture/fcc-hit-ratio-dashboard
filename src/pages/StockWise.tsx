@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react';
 import { useDashboardStore } from '../store/useDashboardStore';
 import { computeHitRatio } from '../lib/aggregates';
 import { StatusBadge } from '../components/StatusBadge';
+import { HitPatternSparkline } from '../components/HitPatternSparkline';
+import { InfoTip } from '../components/InfoTip';
 
 type SortMode = 'hitPct' | 'trancheCount' | 'recent';
 
@@ -9,6 +11,12 @@ function fmtPct(n: number | null): string {
   if (n == null) return '—';
   const sign = n > 0 ? '+' : '';
   return `${sign}${n.toFixed(1)}%`;
+}
+
+function hitPctColor(pct: number): string {
+  if (pct >= 50) return 'var(--status-good)';
+  if (pct >= 30) return 'var(--status-warning)';
+  return 'var(--status-critical)';
 }
 
 export function StockWise() {
@@ -49,7 +57,7 @@ export function StockWise() {
 
   return (
     <div>
-      <div style={{ display: 'flex', gap: 12, marginBottom: 16, alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: 10, marginBottom: 12, alignItems: 'center' }}>
         <input
           placeholder="Filter by scrip…"
           value={filter}
@@ -57,7 +65,7 @@ export function StockWise() {
           style={{
             background: 'var(--surface-2)',
             border: '1px solid var(--border)',
-            borderRadius: 5,
+            borderRadius: 6,
             padding: '7px 10px',
             fontSize: 12,
             width: 220,
@@ -69,7 +77,7 @@ export function StockWise() {
           style={{
             background: 'var(--surface-2)',
             border: '1px solid var(--border)',
-            borderRadius: 5,
+            borderRadius: 6,
             padding: '7px 10px',
             fontSize: 12,
           }}
@@ -81,42 +89,51 @@ export function StockWise() {
         <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>{scripCards.length} scrips</span>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-        {scripCards.map(({ scrip, stats }) => {
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+        {scripCards.map(({ scrip, stats }, idx) => {
           const isOpen = expanded.has(scrip.scripSymbol);
           return (
-            <div
-              key={scrip.scripSymbol}
-              style={{ background: 'var(--surface-1)', border: '1px solid var(--border)', borderRadius: 8 }}
-            >
+            <div key={scrip.scripSymbol} className="card clickable" style={{ overflow: 'hidden' }}>
               <div
                 onClick={() => toggle(scrip.scripSymbol)}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  padding: '12px 16px',
-                  cursor: 'pointer',
+                  padding: '10px 16px',
+                  gap: 16,
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                  <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>{isOpen ? '▾' : '▸'}</span>
-                  <span style={{ fontWeight: 700, fontSize: 14 }}>{scrip.scripSymbol}</span>
-                  <span className="muted" style={{ fontSize: 11 }}>{scrip.exchange}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0 }}>
+                  <span style={{ fontSize: 12, color: 'var(--text-muted)', width: 10 }}>
+                    {isOpen ? '▾' : '▸'}
+                  </span>
+                  <span style={{ fontWeight: 700, fontSize: 14, letterSpacing: '-0.01em' }}>
+                    {scrip.scripSymbol}
+                  </span>
+                  <span className="muted" style={{ fontSize: 10.5 }}>
+                    {scrip.exchange}
+                  </span>
+                  <HitPatternSparkline tranches={scrip.tranches} />
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-                  <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 18, flexShrink: 0 }}>
+                  <span style={{ fontSize: 11.5, color: 'var(--text-muted)', display: 'flex', alignItems: 'center' }}>
                     {scrip.tranches.length} tranche{scrip.tranches.length === 1 ? '' : 's'}
+                    {idx === 0 && (
+                      <InfoTip text="A tranche is one buy — every time you add to a position, even without selling first, it's tracked as its own separate trade with its own entry date." />
+                    )}
                   </span>
                   <span
                     className="mono"
                     style={{
-                      fontSize: 14,
-                      fontWeight: 700,
-                      color: stats.hitPct >= 50 ? 'var(--status-good)' : 'var(--status-critical)',
+                      fontSize: 15,
+                      fontWeight: 800,
+                      color: stats.total === 0 ? 'var(--text-muted)' : hitPctColor(stats.hitPct),
+                      minWidth: 76,
+                      textAlign: 'right',
                     }}
                   >
-                    {stats.hitPct.toFixed(0)}% hit
+                    {stats.total === 0 ? 'pending' : `${stats.hitPct.toFixed(0)}% hit`}
                   </span>
                 </div>
               </div>
@@ -139,7 +156,7 @@ export function StockWise() {
                     <tbody>
                       {scrip.tranches.map((t) => (
                         <tr key={t.id}>
-                          <td>{t.label}</td>
+                          <td className="muted">{t.label}</td>
                           <td>{t.entryDate}</td>
                           <td className="mono">
                             {t.entryPrice.toFixed(2)}
@@ -158,7 +175,12 @@ export function StockWise() {
                               ? '—'
                               : t.exitEvents.map((e) => `${e.date} @ ${e.price.toFixed(2)}`).join(', ')}
                           </td>
-                          <td className="mono">{fmtPct(t.peakMovePct)}</td>
+                          <td
+                            className="mono"
+                            style={{ color: (t.peakMovePct ?? 0) >= 0 ? 'var(--status-good)' : 'var(--status-critical)' }}
+                          >
+                            {fmtPct(t.peakMovePct)}
+                          </td>
                           <td className="mono">{t.daysToHit ?? '—'}</td>
                           <td>
                             <StatusBadge status={t.hitStatus} />
