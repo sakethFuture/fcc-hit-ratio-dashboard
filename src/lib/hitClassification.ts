@@ -43,10 +43,16 @@ export function classifyTranche(
   livePrice?: number,
   splits: StockSplit[] = [],
 ): Tranche {
-  const windowEnd = tranche.closedDate ?? today;
+  // Hit detection is a pure price check: did any tracked close since entry
+  // reach +15%, full stop — independent of whether/when the position was
+  // sold. Scanning only through closedDate (the position's exit date) would
+  // silently hide a real hit that happened after we'd already sold, which is
+  // a data bug, not a feature: the stock still did what it did.
   const windowCloses = closes
-    .filter((c) => c.date >= tranche.entryDate && c.date <= windowEnd)
+    .filter((c) => c.date >= tranche.entryDate && c.date <= today)
     .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  // Actual holding period, unrelated to the price-scan window above.
+  const windowEnd = tranche.closedDate ?? today;
 
   const factor = splitAdjustmentFactor(tranche.entryDate, splits);
   tranche.splitAdjustFactor = factor;
