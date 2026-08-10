@@ -45,6 +45,7 @@ export function buildScripLedger(scripSymbol: string, trades: TradeRow[]): Scrip
       scripSymbol,
       exchange,
       label: `Tranche ${i + 1}`,
+      trancheNumber: i + 1,
       entryDate,
       entryPrice,
       entryQty,

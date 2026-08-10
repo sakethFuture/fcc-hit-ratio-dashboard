@@ -1,11 +1,15 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useDashboardStore } from '../store/useDashboardStore';
-import { computeHitRatio } from '../lib/aggregates';
+import { computeEV, computeHitRatio, filterTranches } from '../lib/aggregates';
+import type { Tranche } from '../types';
 import { StatusBadge } from '../components/StatusBadge';
 import { HitPatternSparkline } from '../components/HitPatternSparkline';
 import { InfoTip } from '../components/InfoTip';
+import { COPY } from '../lib/copy';
 
 type SortMode = 'hitPct' | 'trancheCount' | 'recent';
+type TrancheSortKey = 'trancheNumber' | 'entryDate' | 'peakMovePct' | 'daysToHit';
 
 function fmtPct(n: number | null): string {
   if (n == null) return '—';
@@ -21,20 +25,43 @@ function hitPctBand(pct: number): { color: string; bg: string } {
 
 export function StockWise() {
   const ledger = useDashboardStore((s) => s.ledger);
+  const filterMode = useDashboardStore((s) => s.trancheFilterMode);
+  const [searchParams, setSearchParams] = useSearchParams();
   const [filter, setFilter] = useState('');
   const [sortMode, setSortMode] = useState<SortMode>('recent');
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  const [trancheSortKey, setTrancheSortKey] = useState<TrancheSortKey>('trancheNumber');
+  const [trancheSortDir, setTrancheSortDir] = useState<1 | -1>(1);
+
+  // Deep-link support: a best/worst-tranche card elsewhere can link here with
+  // `?scrip=SYMBOL` to pre-filter and auto-expand the right row.
+  useEffect(() => {
+    const scrip = searchParams.get('scrip');
+    if (!scrip) return;
+    setFilter(scrip);
+    setExpanded((prev) => new Set(prev).add(scrip));
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      next.delete('scrip');
+      return next;
+    }, { replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const scripCards = useMemo(() => {
     if (!ledger) return [];
     const cards = ledger.scrips.map((s) => {
-      const stats = computeHitRatio(s.tranches);
-      const mostRecent = s.tranches.reduce((max, t) => (t.entryDate > max ? t.entryDate : max), '');
-      return { scrip: s, stats, mostRecent };
+      const tranches = filterTranches(s.tranches, filterMode);
+      const stats = computeHitRatio(tranches);
+      const ev = computeEV(tranches);
+      const mostRecent = tranches.reduce((max, t) => (t.entryDate > max ? t.entryDate : max), '');
+      return { scrip: { ...s, tranches }, stats, ev, mostRecent };
     });
 
-    const filtered = cards.filter((c) =>
-      c.scrip.scripSymbol.toLowerCase().includes(filter.toLowerCase()),
+    const filtered = cards.filter(
+      (c) =>
+        c.scrip.tranches.length > 0 &&
+        c.scrip.scripSymbol.toLowerCase().includes(filter.toLowerCase()),
     );
 
     filtered.sort((a, b) => {
@@ -44,7 +71,7 @@ export function StockWise() {
     });
 
     return filtered;
-  }, [ledger, filter, sortMode]);
+  }, [ledger, filter, sortMode, filterMode]);
 
   const toggle = (sym: string) => {
     setExpanded((prev) => {
@@ -54,6 +81,38 @@ export function StockWise() {
       return next;
     });
   };
+
+  const setTrancheSort = (key: TrancheSortKey) => {
+    if (key === trancheSortKey) setTrancheSortDir((d) => (d === 1 ? -1 : 1));
+    else {
+      setTrancheSortKey(key);
+      setTrancheSortDir(1);
+    }
+  };
+
+  const sortTranches = (tranches: Tranche[]): Tranche[] => {
+    const copy = [...tranches];
+    copy.sort((a, b) => {
+      const av = a[trancheSortKey];
+      const bv = b[trancheSortKey];
+      if (av == null && bv == null) return 0;
+      if (av == null) return 1;
+      if (bv == null) return -1;
+      if (typeof av === 'string' && typeof bv === 'string') return av.localeCompare(bv) * trancheSortDir;
+      return ((av as number) - (bv as number)) * trancheSortDir;
+    });
+    return copy;
+  };
+
+  const trancheTh = (key: TrancheSortKey, label: string) => (
+    <th
+      style={{ cursor: 'pointer', color: trancheSortKey === key ? 'var(--text-secondary)' : undefined }}
+      onClick={() => setTrancheSort(key)}
+    >
+      {label}
+      {trancheSortKey === key ? (trancheSortDir === 1 ? ' ▲' : ' ▼') : ''}
+    </th>
+  );
 
   return (
     <div>
@@ -90,7 +149,7 @@ export function StockWise() {
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
-        {scripCards.map(({ scrip, stats }, idx) => {
+        {scripCards.map(({ scrip, stats, ev }, idx) => {
           const isOpen = expanded.has(scrip.scripSymbol);
           return (
             <div key={scrip.scripSymbol} className="card clickable" style={{ overflow: 'hidden' }}>
@@ -102,6 +161,7 @@ export function StockWise() {
                   justifyContent: 'space-between',
                   padding: 'var(--space-3) var(--space-4)',
                   gap: 'var(--space-4)',
+                  flexWrap: 'wrap',
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', minWidth: 0 }}>
@@ -119,9 +179,18 @@ export function StockWise() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', flexShrink: 0 }}>
                   <span style={{ fontSize: 11.5, color: 'var(--text-muted)', display: 'flex', alignItems: 'center' }}>
                     {scrip.tranches.length} tranche{scrip.tranches.length === 1 ? '' : 's'}
-                    {idx === 0 && (
-                      <InfoTip text="A tranche is one buy — every time you add to a position, even without selling first, it's tracked as its own separate trade with its own entry date." />
-                    )}
+                    {idx === 0 && <InfoTip text={COPY.tranche.tooltip} />}
+                  </span>
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 700,
+                      color: (ev.evPct ?? 0) >= 0 ? 'var(--status-good)' : 'var(--status-critical)',
+                    }}
+                    title="Expected value for this scrip"
+                  >
+                    EV {fmtPct(ev.evPct)}
                   </span>
                   <span
                     className="mono"
@@ -135,32 +204,36 @@ export function StockWise() {
                       padding: 'var(--space-1) var(--space-3)',
                       minWidth: 76,
                       textAlign: 'center',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                     }}
                   >
                     {stats.hitPct.toFixed(0)}% HIT
+                    {idx === 0 && <InfoTip text={COPY.hit.tooltip} />}
                   </span>
                 </div>
               </div>
 
               {isOpen && (
-                <div style={{ borderTop: '1px solid var(--border)' }}>
+                <div className="table-scroll" style={{ borderTop: '1px solid var(--border)' }}>
                   <table>
                     <thead>
                       <tr>
-                        <th>Tranche</th>
-                        <th>Entry Date</th>
+                        {trancheTh('trancheNumber', 'Tranche #')}
+                        {trancheTh('entryDate', 'Entry Date')}
                         <th>Entry Price</th>
                         <th>Entry Qty</th>
                         <th>Exit</th>
-                        <th>Peak Move</th>
-                        <th>Days to Hit</th>
+                        {trancheTh('peakMovePct', 'Peak Move')}
+                        {trancheTh('daysToHit', 'Days to Hit')}
                         <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {scrip.tranches.map((t) => (
+                      {sortTranches(scrip.tranches).map((t) => (
                         <tr key={t.id}>
-                          <td className="muted">{t.label}</td>
+                          <td className="muted">{t.trancheNumber}</td>
                           <td>{t.entryDate}</td>
                           <td className="mono">
                             {t.entryPrice.toFixed(2)}

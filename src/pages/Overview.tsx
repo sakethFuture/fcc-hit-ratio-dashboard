@@ -1,17 +1,12 @@
 import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDashboardStore } from '../store/useDashboardStore';
-import { allTranches, computeHitRatio, computePnl, topHits, worstNotHits } from '../lib/aggregates';
-import { StatTile } from '../components/StatTile';
+import { allTranches, computeEV, computeHitRatio, filterTranches } from '../lib/aggregates';
 import { HitRatioMeter } from '../components/HitRatioMeter';
-import { StatusBadge } from '../components/StatusBadge';
+import { MetricCard } from '../components/MetricCard';
 import { ActiveFolioTable } from '../components/ActiveFolioTable';
 import { InfoTip } from '../components/InfoTip';
-
-function fmtMoney(n: number): string {
-  const sign = n < 0 ? '-' : '';
-  return `${sign}₹${Math.abs(n).toLocaleString('en-IN', { maximumFractionDigits: 0 })}`;
-}
+import { COPY } from '../lib/copy';
 
 function fmtPct(n: number | null): string {
   if (n == null) return '—';
@@ -19,15 +14,23 @@ function fmtPct(n: number | null): string {
   return `${sign}${n.toFixed(1)}%`;
 }
 
+/** Home — kept deliberately tight: overall hit ratio (clickable → Time-based),
+ * the EV headline, and current holdings. Everything else (breakdowns, deep
+ * stats, top-5 lists) lives in Portfolio Stats so this stays fast to scan. */
 export function Overview() {
   const navigate = useNavigate();
   const ledger = useDashboardStore((s) => s.ledger);
+  const filterMode = useDashboardStore((s) => s.trancheFilterMode);
 
-  const tranches = useMemo(() => allTranches(ledger), [ledger]);
+  const rawTranches = useMemo(() => allTranches(ledger), [ledger]);
+  // Active Folio always reflects real current holdings — it isn't subject to
+  // the Finished-trades-only toggle, which only narrows rollups/stats.
+  const tranches = useMemo(
+    () => filterTranches(rawTranches, filterMode),
+    [rawTranches, filterMode],
+  );
   const stats = useMemo(() => computeHitRatio(tranches), [tranches]);
-  const pnl = useMemo(() => computePnl(tranches), [tranches]);
-  const best = useMemo(() => topHits(tranches, 5), [tranches]);
-  const worst = useMemo(() => worstNotHits(tranches, 5), [tranches]);
+  const ev = useMemo(() => computeEV(tranches), [tranches]);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-5)' }}>
@@ -61,7 +64,7 @@ export function Overview() {
               }}
             >
               Hit Ratio
-              <InfoTip text="Hit means the stock's closing price reached at least 15% above what we paid, at any point since we entered — whether or not we actually sold at that point. A tranche is either Hit or Not Hit; there's no in-between bucket." />
+              <InfoTip text={COPY.hit.tooltip} />
             </div>
             <div style={{ fontSize: 11.5, color: 'var(--text-secondary)', marginTop: 'var(--space-2)' }}>
               {stats.hit} hit · {stats.notHit} not hit
@@ -72,34 +75,18 @@ export function Overview() {
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: 'var(--space-3)', flexWrap: 'wrap', flex: 1 }}>
-          <StatTile
-            label={
-              <>
-                Total Tranches
-                <InfoTip text="A tranche is one buy — every time you add to a position, even without selling first, it's tracked as its own separate trade with its own entry date." />
-              </>
-            }
-            value={stats.total}
-          />
-          <StatTile label="Hit" value={stats.hit} tone="good" />
-          <StatTile label="Not Hit" value={stats.notHit} tone="critical" />
-          <StatTile
-            label="Realized P&L"
-            value={fmtMoney(pnl.realized)}
-            tone={pnl.realized >= 0 ? 'good' : 'critical'}
-          />
-          <StatTile
-            label="Unrealized P&L"
-            value={fmtMoney(pnl.unrealized)}
-            tone={pnl.unrealized >= 0 ? 'good' : 'critical'}
-          />
-        </div>
-      </section>
-
-      <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-4)' }}>
-        <RankedList title="Top 5 Hits" rows={best} kind="hit" />
-        <RankedList title="Top 5 Not-Hits (worst drawdown)" rows={worst} kind="not_hit" />
+        <MetricCard
+          size="lg"
+          label={
+            <>
+              Expected Value
+              <InfoTip text="Probability-weighted average outcome: hit-rate × average peak gain on hits, plus miss-rate × average result on misses (booked loss for closed tranches, current unrealized move for still-open ones)." />
+            </>
+          }
+          value={fmtPct(ev.evPct)}
+          sub={`n=${ev.n} · avg hit gain ${fmtPct(ev.avgHitGain)} · avg miss result ${fmtPct(ev.avgMissResult)}`}
+          tone={ev.evPct >= 0 ? 'good' : 'critical'}
+        />
       </section>
 
       <section>
@@ -115,74 +102,8 @@ export function Overview() {
         >
           Active Folio
         </h2>
-        <ActiveFolioTable tranches={tranches} />
+        <ActiveFolioTable tranches={rawTranches} />
       </section>
-    </div>
-  );
-}
-
-function RankedList({
-  title,
-  rows,
-  kind,
-}: {
-  title: string;
-  rows: ReturnType<typeof topHits>;
-  kind: 'hit' | 'not_hit';
-}) {
-  return (
-    <div className="card" style={{ padding: 'var(--space-4)' }}>
-      <div
-        style={{
-          fontSize: 11.5,
-          fontWeight: 700,
-          textTransform: 'uppercase',
-          letterSpacing: '0.05em',
-          color: 'var(--text-secondary)',
-          marginBottom: 'var(--space-2)',
-        }}
-      >
-        {title}
-      </div>
-      {rows.length === 0 ? (
-        <div className="muted" style={{ fontSize: 12 }}>
-          No tranches yet.
-        </div>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Scrip</th>
-              <th>Tranche</th>
-              <th>Entry</th>
-              <th>{kind === 'hit' ? 'Days to Hit' : 'Trough Move'}</th>
-              <th>Peak Move</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((t) => (
-              <tr key={t.id}>
-                <td style={{ fontWeight: 600 }}>{t.scripSymbol}</td>
-                <td className="muted">{t.label}</td>
-                <td>{t.entryDate}</td>
-                <td className="mono">
-                  {kind === 'hit' ? t.daysToHit ?? '—' : fmtPct(t.troughMovePct)}
-                </td>
-                <td
-                  className="mono"
-                  style={{ color: (t.peakMovePct ?? 0) >= 0 ? 'var(--status-good)' : 'var(--status-critical)' }}
-                >
-                  {fmtPct(t.peakMovePct)}
-                </td>
-                <td>
-                  <StatusBadge tranche={t} />
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
     </div>
   );
 }

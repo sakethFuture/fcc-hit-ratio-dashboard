@@ -265,3 +265,68 @@ button:focus-visible,
 .secondary {
   color: var(--text-secondary);
 }
+
+/* --- Responsive ------------------------------------------------------- */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: 0 var(--space-5);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-1);
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.app-header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding: var(--space-2) 0;
+}
+
+/* Wide tables (Stock-wise expanded rows, Active Folio, Time-based, Portfolio
+   Stats) scroll horizontally inside their own box instead of blowing out the
+   page width on narrow viewports. */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.two-col-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 900px) {
+  .two-col-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 13px;
+  }
+
+  .app-header {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  main {
+    padding: var(--space-4) !important;
+  }
+
+  th,
+  td {
+    padding: var(--space-2);
+  }
+}

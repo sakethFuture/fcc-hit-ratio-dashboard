@@ -3,6 +3,7 @@ import { parseAccountMetadata, parseTradelistingWorkbook } from '../lib/parseTra
 import { buildLedgerFromTrades } from '../lib/trancheEngine';
 import { classifyAllTranches, type CloseBar } from '../lib/hitClassification';
 import { commitFile, getGithubToken } from '../lib/githubCommit';
+import type { TrancheFilterMode } from '../lib/aggregates';
 import type { Ledger, LivePrice, StockSplit, TickerMapEntry } from '../types';
 
 const withBase = (path: string) => `${import.meta.env.BASE_URL}${path}`;
@@ -22,10 +23,12 @@ interface DashboardState {
   error: string | null;
   commitStatus: 'idle' | 'committing' | 'success' | 'error' | 'no-token';
   commitError: string | null;
+  trancheFilterMode: TrancheFilterMode;
 
   bootstrap: () => Promise<void>;
   loadTradelistingFile: (file: File) => Promise<void>;
   reclassify: () => void;
+  setTrancheFilterMode: (mode: TrancheFilterMode) => void;
 }
 
 async function fetchJson<T>(path: string): Promise<T | null> {
@@ -55,6 +58,9 @@ export const useDashboardStore = create<DashboardState>((set, get) => ({
   error: null,
   commitStatus: 'idle',
   commitError: null,
+  trancheFilterMode: 'all',
+
+  setTrancheFilterMode: (mode) => set({ trancheFilterMode: mode }),
 
   bootstrap: async () => {
     set({ loading: true, error: null });

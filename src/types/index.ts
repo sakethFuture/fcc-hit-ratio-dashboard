@@ -29,13 +29,16 @@ export interface ExitEvent {
   price: number;
 }
 
-export type HitStatus = 'HIT' | 'HIT_RUNNING' | 'NOT_HIT' | 'ACTIVE';
+/** Binary outcome only — whether shares are still held is tracked separately via
+ * `remainingQty`, not folded into this enum. */
+export type HitStatus = 'HIT' | 'NOT_HIT';
 
 export interface Tranche {
   id: string; // `${scrip}__T${n}`
   scripSymbol: string;
   exchange: string;
   label: string; // "Tranche 1", "Tranche 2", ...
+  trancheNumber: number; // 1, 2, 3, ... — same sequence as `label`, as a real number
   entryDate: string;
   entryPrice: number;
   entryQty: number;

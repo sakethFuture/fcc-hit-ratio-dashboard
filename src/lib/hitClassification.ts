@@ -26,8 +26,10 @@ export function splitAdjustmentFactor(entryDate: string, splits: StockSplit[]): 
 }
 
 /**
- * Classifies a single tranche as HIT / HIT_RUNNING / NOT_HIT / ACTIVE and
- * fills in the derived fields. Mutates and returns the same tranche object.
+ * Classifies a single tranche as HIT / NOT_HIT and fills in the derived
+ * fields. Mutates and returns the same tranche object. Whether shares are
+ * still held (`remainingQty > 0`) is a separate, orthogonal fact from this
+ * status — it's never folded into the status value itself.
  *
  * `closes` should be the scrip's full daily close series (any order); this
  * function slices out the relevant window itself. `livePrice`, if supplied,
@@ -65,11 +67,11 @@ export function classifyTranche(
   if (hit) {
     tranche.hitDate = hit.date;
     tranche.daysToHit = daysBetween(tranche.entryDate, hit.date);
-    tranche.hitStatus = isOpenNow ? 'HIT_RUNNING' : 'HIT';
+    tranche.hitStatus = 'HIT';
   } else {
     tranche.hitDate = null;
     tranche.daysToHit = null;
-    tranche.hitStatus = isOpenNow ? 'ACTIVE' : 'NOT_HIT';
+    tranche.hitStatus = 'NOT_HIT';
   }
 
   tranche.daysHeld = daysBetween(tranche.entryDate, windowEnd);

@@ -11,9 +11,18 @@ import {
   YAxis,
 } from 'recharts';
 import { useDashboardStore } from '../store/useDashboardStore';
-import { allTranches, bucketHitRatio, type BucketGranularity, type TimeBucketStat } from '../lib/aggregates';
+import {
+  allTranches,
+  bucketHitRatio,
+  filterTranches,
+  splitByTrancheGeneration,
+  type BucketGranularity,
+  type TimeBucketStat,
+} from '../lib/aggregates';
 import { StatusBadge } from '../components/StatusBadge';
 import { InfoTip } from '../components/InfoTip';
+import { MetricCard } from '../components/MetricCard';
+import { COPY } from '../lib/copy';
 
 const GRANULARITIES: { key: BucketGranularity; label: string }[] = [
   { key: 'daily', label: 'Daily' },
@@ -58,6 +67,7 @@ function ChartTooltip({ active, payload }: { active?: boolean; payload?: Tooltip
       <div className="muted">
         {d.hit} hit / {d.total} tranche{d.total === 1 ? '' : 's'}
       </div>
+      <div className="muted">EV: {fmtPct(d.ev.evPct)}</div>
       <div className="muted" style={{ marginTop: 4, fontSize: 10.5 }}>Click for detail →</div>
     </div>
   );
@@ -65,10 +75,14 @@ function ChartTooltip({ active, payload }: { active?: boolean; payload?: Tooltip
 
 export function TimeBased() {
   const ledger = useDashboardStore((s) => s.ledger);
+  const filterMode = useDashboardStore((s) => s.trancheFilterMode);
   const [granularity, setGranularity] = useState<BucketGranularity>('monthly');
   const [selectedBucket, setSelectedBucket] = useState<string | null>(null);
 
-  const tranches = useMemo(() => allTranches(ledger), [ledger]);
+  const tranches = useMemo(
+    () => filterTranches(allTranches(ledger), filterMode),
+    [ledger, filterMode],
+  );
   const buckets = useMemo(() => bucketHitRatio(tranches, granularity), [tranches, granularity]);
   const selected = buckets.find((b) => b.bucket === selectedBucket) ?? null;
 
@@ -144,7 +158,7 @@ export function TimeBased() {
         </ResponsiveContainer>
       </div>
 
-      <div className="card" style={{ overflow: 'hidden' }}>
+      <div className="card table-scroll">
         <table>
           <thead>
             <tr>
@@ -152,16 +166,17 @@ export function TimeBased() {
               <th>
                 <span style={{ display: 'inline-flex', alignItems: 'center' }}>
                   Tranches
-                  <InfoTip text="A tranche is one buy — every time you add to a position, even without selling first, it's tracked as its own separate trade with its own entry date." />
+                  <InfoTip text={COPY.tranche.tooltip} />
                 </span>
               </th>
               <th>
                 <span style={{ display: 'inline-flex', alignItems: 'center' }}>
                   Hit
-                  <InfoTip text="Hit means the stock's closing price reached at least 15% above what we paid, at any point since we entered — whether or not we actually sold at that point." />
+                  <InfoTip text={COPY.hit.tooltip} />
                 </span>
               </th>
               <th>Hit Ratio</th>
+              <th>EV</th>
             </tr>
           </thead>
           <tbody>
@@ -180,11 +195,17 @@ export function TimeBased() {
                 <td className="mono" style={{ color: bandColor(b.hitPct, b.total), fontWeight: 700 }}>
                   {b.total > 0 ? `${b.hitPct.toFixed(1)}%` : '—'}
                 </td>
+                <td
+                  className="mono"
+                  style={{ color: (b.ev.evPct ?? 0) >= 0 ? 'var(--status-good)' : 'var(--status-critical)' }}
+                >
+                  {b.total > 0 ? fmtPct(b.ev.evPct) : '—'}
+                </td>
               </tr>
             ))}
             {buckets.length === 0 && (
               <tr>
-                <td colSpan={4} className="muted" style={{ textAlign: 'center', padding: 20 }}>
+                <td colSpan={5} className="muted" style={{ textAlign: 'center', padding: 20 }}>
                   No tranches yet.
                 </td>
               </tr>
@@ -215,39 +236,64 @@ export function TimeBased() {
               Close
             </button>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Scrip</th>
-                <th>Tranche</th>
-                <th>Entry Date</th>
-                <th>Entry Price</th>
-                <th>Peak Move</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[...selected.tranches]
-                .sort((a, b) => (a.entryDate < b.entryDate ? -1 : 1))
-                .map((t) => (
-                  <tr key={t.id}>
-                    <td style={{ fontWeight: 600 }}>{t.scripSymbol}</td>
-                    <td className="muted">{t.label}</td>
-                    <td>{t.entryDate}</td>
-                    <td className="mono">{t.entryPrice.toFixed(2)}</td>
-                    <td
-                      className="mono"
-                      style={{ color: (t.peakMovePct ?? 0) >= 0 ? 'var(--status-good)' : 'var(--status-critical)' }}
-                    >
-                      {fmtPct(t.peakMovePct)}
-                    </td>
-                    <td>
-                      <StatusBadge tranche={t} />
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+
+          {(() => {
+            const gen = splitByTrancheGeneration(selected.tranches);
+            return (
+              <div style={{ display: 'flex', gap: 'var(--space-3)', flexWrap: 'wrap', marginBottom: 'var(--space-4)' }}>
+                <MetricCard
+                  size="sm"
+                  label={gen.first.label}
+                  value={gen.first.stats.total > 0 ? `${gen.first.stats.hitPct.toFixed(0)}%` : '—'}
+                  sub={`n=${gen.first.stats.total} · EV ${fmtPct(gen.first.ev.evPct)}`}
+                  tone={gen.first.stats.total > 0 ? (gen.first.stats.hitPct >= 50 ? 'good' : gen.first.stats.hitPct >= 30 ? 'warning' : 'critical') : 'default'}
+                />
+                <MetricCard
+                  size="sm"
+                  label={gen.addOns.label}
+                  value={gen.addOns.stats.total > 0 ? `${gen.addOns.stats.hitPct.toFixed(0)}%` : '—'}
+                  sub={`n=${gen.addOns.stats.total} · EV ${fmtPct(gen.addOns.ev.evPct)}`}
+                  tone={gen.addOns.stats.total > 0 ? (gen.addOns.stats.hitPct >= 50 ? 'good' : gen.addOns.stats.hitPct >= 30 ? 'warning' : 'critical') : 'default'}
+                />
+              </div>
+            );
+          })()}
+
+          <div className="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Scrip</th>
+                  <th>Tranche</th>
+                  <th>Entry Date</th>
+                  <th>Entry Price</th>
+                  <th>Peak Move</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[...selected.tranches]
+                  .sort((a, b) => (a.entryDate < b.entryDate ? -1 : 1))
+                  .map((t) => (
+                    <tr key={t.id}>
+                      <td style={{ fontWeight: 600 }}>{t.scripSymbol}</td>
+                      <td className="muted">{t.label}</td>
+                      <td>{t.entryDate}</td>
+                      <td className="mono">{t.entryPrice.toFixed(2)}</td>
+                      <td
+                        className="mono"
+                        style={{ color: (t.peakMovePct ?? 0) >= 0 ? 'var(--status-good)' : 'var(--status-critical)' }}
+                      >
+                        {fmtPct(t.peakMovePct)}
+                      </td>
+                      <td>
+                        <StatusBadge tranche={t} />
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </div>

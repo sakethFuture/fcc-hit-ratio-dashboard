@@ -18,14 +18,26 @@ export function allTranches(ledger: Ledger | null): Tranche[] {
 
 /**
  * Binary hit test — the one place "did this tranche hit?" is decided.
- * HIT and HIT_RUNNING both mean the price touched +15% at some point
- * (whether or not shares are still held); everything else — NOT_HIT
- * (closed, never hit) and ACTIVE (still open, hasn't hit yet) — is "not hit".
- * There is no third bucket: an undecided open position is provisionally
- * "not hit" until it either hits or gets exited without hitting.
+ * `hitStatus` is only ever 'HIT' or 'NOT_HIT' (see hitClassification.ts);
+ * whether shares are still held is a separate fact (`remainingQty > 0`),
+ * never a third status bucket. A still-open, not-yet-hit tranche is
+ * provisionally "not hit" until it either hits or gets exited without
+ * hitting.
  */
 export function isHit(t: Tranche): boolean {
-  return t.hitStatus === 'HIT' || t.hitStatus === 'HIT_RUNNING';
+  return t.hitStatus === 'HIT';
+}
+
+export type TrancheFilterMode = 'all' | 'closedOnly';
+
+/**
+ * The one place the Finished-trades-only / Every-trade toggle is applied.
+ * Every rollup (hit ratio, EV, tranche-position, streaks, etc.) should filter
+ * through this before computing anything — never re-implement the filter.
+ */
+export function filterTranches(tranches: Tranche[], mode: TrancheFilterMode): Tranche[] {
+  if (mode === 'all') return tranches;
+  return tranches.filter((t) => t.remainingQty === 0);
 }
 
 export interface HitRatioStats {
@@ -81,30 +93,203 @@ export function worstNotHits(tranches: Tranche[], n: number): Tranche[] {
     .slice(0, n);
 }
 
+// --- Expected Value -------------------------------------------------------
+//
+// EV% = Hit% × avg-peak-gain-on-Hits + Miss% × avg-signed-result-on-Misses.
+// Both fractions and both averages are signed real numbers — this is a
+// straight probability-weighted average of actual outcomes, so a miss
+// bucket that happens to be net flat/positive pulls EV up, exactly as a
+// true expected value should (not the "always subtract" behavior you'd get
+// from treating the miss average as an unsigned loss magnitude).
+
+/**
+ * For a not-hit tranche: the booked %-return if fully exited (realized P&L
+ * over cost basis, signed), or the current unrealized %-move if still open.
+ * Returns null for hit tranches — this is a miss-side-only figure.
+ */
+export function missResultPct(t: Tranche): number | null {
+  if (isHit(t)) return null;
+  if (t.remainingQty === 0) {
+    const costBasis = t.entryQty * t.entryPrice;
+    return costBasis > 0 ? ((t.realizedPnl ?? 0) / costBasis) * 100 : null;
+  }
+  return t.currentMovePct;
+}
+
+export interface EVStats {
+  evPct: number;
+  hitPct: number;
+  missPct: number;
+  avgHitGain: number | null;
+  avgMissResult: number | null;
+  n: number;
+}
+
+/** Single source of truth for EV — every breakdown (headline, per tranche-number,
+ * per scrip, per time bucket) calls this on a pre-filtered tranche list. */
+export function computeEV(tranches: Tranche[]): EVStats {
+  const stats = computeHitRatio(tranches);
+  const hits = tranches.filter(isHit);
+  const misses = tranches.filter((t) => !isHit(t));
+
+  const avgHitGain =
+    hits.length > 0 ? hits.reduce((s, t) => s + (t.peakMovePct ?? 0), 0) / hits.length : null;
+  const missResults = misses.map(missResultPct).filter((v): v is number => v != null);
+  const avgMissResult =
+    missResults.length > 0 ? missResults.reduce((s, v) => s + v, 0) / missResults.length : null;
+
+  const hitFrac = stats.total > 0 ? stats.hit / stats.total : 0;
+  const missFrac = stats.total > 0 ? stats.notHit / stats.total : 0;
+  const evPct = hitFrac * (avgHitGain ?? 0) + missFrac * (avgMissResult ?? 0);
+
+  return {
+    evPct,
+    hitPct: stats.hitPct,
+    missPct: stats.total > 0 ? (stats.notHit / stats.total) * 100 : 0,
+    avgHitGain,
+    avgMissResult,
+    n: stats.total,
+  };
+}
+
 export interface ScripHitRatio {
   scripSymbol: string;
   total: number;
   hit: number;
   hitPct: number;
+  ev: EVStats;
   mostRecentEntryDate: string;
 }
 
-export function perScripHitRatio(ledger: Ledger | null): ScripHitRatio[] {
-  if (!ledger) return [];
-  return ledger.scrips.map((s) => {
+/** Per-scrip rollup for the Stock-wise tab — takes a caller-filtered tranche
+ * list per scrip (the Finished-trades-only/Every-trade toggle is applied by
+ * the caller via `filterTranches` before this runs). */
+export function perScripHitRatio(scrips: { scripSymbol: string; tranches: Tranche[] }[]): ScripHitRatio[] {
+  return scrips.map((s) => {
     const stats = computeHitRatio(s.tranches);
-    const mostRecent = s.tranches.reduce(
-      (max, t) => (t.entryDate > max ? t.entryDate : max),
-      '',
-    );
+    const mostRecent = s.tranches.reduce((max, t) => (t.entryDate > max ? t.entryDate : max), '');
     return {
       scripSymbol: s.scripSymbol,
       total: s.tranches.length,
       hit: stats.hit,
       hitPct: stats.hitPct,
+      ev: computeEV(s.tranches),
       mostRecentEntryDate: mostRecent,
     };
   });
+}
+
+// --- Tranche-position (tranche-number) breakdown ---------------------------
+
+export interface TrancheNumberStat {
+  trancheNumber: number;
+  label: string;
+  stats: HitRatioStats;
+  ev: EVStats;
+}
+
+/** One entry per tranche-sequence-number present (1..max), each with its own
+ * hit-ratio and EV — "does the 3rd add-on to a position hit as often as the
+ * 1st entry?" */
+export function perTrancheNumberHitRatio(tranches: Tranche[]): TrancheNumberStat[] {
+  const maxN = tranches.reduce((m, t) => Math.max(m, t.trancheNumber), 0);
+  const out: TrancheNumberStat[] = [];
+  for (let n = 1; n <= maxN; n++) {
+    const list = tranches.filter((t) => t.trancheNumber === n);
+    out.push({ trancheNumber: n, label: `Tranche ${n}`, stats: computeHitRatio(list), ev: computeEV(list) });
+  }
+  return out;
+}
+
+export interface GenerationStat {
+  label: string;
+  stats: HitRatioStats;
+  ev: EVStats;
+}
+
+/** Tranche 1 (a brand-new position) vs Tranche 2+ (adding to an existing one) —
+ * used for the secondary breakdown inside each Time-based bucket. */
+export function splitByTrancheGeneration(tranches: Tranche[]): {
+  first: GenerationStat;
+  addOns: GenerationStat;
+} {
+  const first = tranches.filter((t) => t.trancheNumber === 1);
+  const addOns = tranches.filter((t) => t.trancheNumber > 1);
+  return {
+    first: { label: 'Tranche 1 (new entries)', stats: computeHitRatio(first), ev: computeEV(first) },
+    addOns: { label: 'Tranche 2+ (adds)', stats: computeHitRatio(addOns), ev: computeEV(addOns) },
+  };
+}
+
+// --- Additional portfolio-wide metrics --------------------------------------
+
+/** Mean days-to-hit among hit tranches only; null if there are none. */
+export function avgDaysToHit(tranches: Tranche[]): number | null {
+  const days = tranches
+    .filter(isHit)
+    .map((t) => t.daysToHit)
+    .filter((d): d is number => d != null);
+  return days.length > 0 ? days.reduce((s, d) => s + d, 0) / days.length : null;
+}
+
+export interface StreakStat {
+  type: 'hit' | 'miss' | null;
+  count: number;
+}
+
+/** Current portfolio-wide streak, walking backward from the most recent entry
+ * date counting consecutive tranches with the same hit/miss outcome. */
+export function currentStreak(tranches: Tranche[]): StreakStat {
+  const sorted = [...tranches].sort((a, b) => (a.entryDate < b.entryDate ? -1 : a.entryDate > b.entryDate ? 1 : 0));
+  if (sorted.length === 0) return { type: null, count: 0 };
+  const lastIsHit = isHit(sorted[sorted.length - 1]);
+  let count = 0;
+  for (let i = sorted.length - 1; i >= 0; i--) {
+    if (isHit(sorted[i]) !== lastIsHit) break;
+    count++;
+  }
+  return { type: lastIsHit ? 'hit' : 'miss', count };
+}
+
+export interface CapitalDeployedSplit {
+  hitStillRunning: number;
+  notHitStillOpen: number;
+}
+
+/** Cost-basis capital currently held in open positions, split by whether that
+ * tranche has already hit (still running) or hasn't (still open, undecided). */
+export function capitalDeployedSplit(tranches: Tranche[]): CapitalDeployedSplit {
+  const open = tranches.filter((t) => t.remainingQty > 0);
+  let hitStillRunning = 0;
+  let notHitStillOpen = 0;
+  for (const t of open) {
+    const capital = t.remainingQty * t.entryPrice;
+    if (isHit(t)) hitStillRunning += capital;
+    else notHitStillOpen += capital;
+  }
+  return { hitStillRunning, notHitStillOpen };
+}
+
+/** Single tranche with the highest peak move across the whole set (hit or not). */
+export function bestTranche(tranches: Tranche[]): Tranche | null {
+  return tranches.reduce<Tranche | null>((best, t) => {
+    if (t.peakMovePct == null) return best;
+    return !best || t.peakMovePct > (best.peakMovePct ?? -Infinity) ? t : best;
+  }, null);
+}
+
+/** Single tranche with the worst drawdown (lowest trough move) across the whole set. */
+export function worstDrawdownTranche(tranches: Tranche[]): Tranche | null {
+  return tranches.reduce<Tranche | null>((worst, t) => {
+    if (t.troughMovePct == null) return worst;
+    return !worst || t.troughMovePct < (worst.troughMovePct ?? Infinity) ? t : worst;
+  }, null);
+}
+
+/** Mean capital committed per tranche at entry (qty × entry price). */
+export function avgTrancheSize(tranches: Tranche[]): number | null {
+  if (tranches.length === 0) return null;
+  return tranches.reduce((s, t) => s + t.entryQty * t.entryPrice, 0) / tranches.length;
 }
 
 export type BucketGranularity = 'daily' | 'weekly' | 'monthly' | 'quarterly' | 'yearly';
@@ -134,6 +319,7 @@ export interface TimeBucketStat {
   total: number;
   hit: number;
   hitPct: number;
+  ev: EVStats;
   tranches: Tranche[];
 }
 
@@ -184,6 +370,13 @@ export function bucketHitRatio(
   return allKeys.map((bucket) => {
     const list = map.get(bucket) ?? [];
     const stats = computeHitRatio(list);
-    return { bucket, total: list.length, hit: stats.hit, hitPct: stats.hitPct, tranches: list };
+    return {
+      bucket,
+      total: list.length,
+      hit: stats.hit,
+      hitPct: stats.hitPct,
+      ev: computeEV(list),
+      tranches: list,
+    };
   });
 }
