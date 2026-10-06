@@ -1,580 +1,580 @@
 {
-  "generatedAt": "2026-10-02T09:31:56.525448+00:00",
+  "generatedAt": "2026-10-06T09:56:07.093980+00:00",
   "prices": {
     "ADVENZYMES.NS": {
       "ticker": "ADVENZYMES.NS",
-      "ltp": 274.5,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 273.6000061035156,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "ALLDIGI.NS": {
       "ticker": "ALLDIGI.NS",
-      "ltp": 755.25,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 770.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "AMBIKCO.NS": {
       "ticker": "AMBIKCO.NS",
-      "ltp": 1515.6,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1526.0999755859375,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "ANUP.NS": {
       "ticker": "ANUP.NS",
-      "ltp": 1565.1,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1578.5,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "APARINDS.NS": {
       "ticker": "APARINDS.NS",
-      "ltp": 17680.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 17973.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "APCOTEXIND.NS": {
       "ticker": "APCOTEXIND.NS",
-      "ltp": 597.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 610.7000122070312,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "ARFIN.NS": {
       "ticker": "ARFIN.NS",
-      "ltp": 87.28,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 96.58999633789062,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "ASIANTILES.NS": {
       "ticker": "ASIANTILES.NS",
-      "ltp": 47.5,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 47.95000076293945,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "AUROPHARMA.NS": {
       "ticker": "AUROPHARMA.NS",
-      "ltp": 1676.8,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1686.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "AVANTEL.NS": {
       "ticker": "AVANTEL.NS",
-      "ltp": 150.29,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 151.27000427246094,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "BANCOINDIA.NS": {
       "ticker": "BANCOINDIA.NS",
-      "ltp": 590.5,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 602.5499877929688,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "BHARATSE.NS": {
       "ticker": "BHARATSE.NS",
-      "ltp": 205.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 205.60000610351562,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "BORANA.NS": {
       "ticker": "BORANA.NS",
-      "ltp": 270.1,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 270.1000061035156,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "BORORENEW.NS": {
       "ticker": "BORORENEW.NS",
-      "ltp": 450.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 451.6000061035156,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "CERA.NS": {
       "ticker": "CERA.NS",
-      "ltp": 5086.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 5133.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "CHOICEIN.NS": {
       "ticker": "CHOICEIN.NS",
-      "ltp": 715.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 726.5499877929688,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "CONTROLPR.NS": {
       "ticker": "CONTROLPR.NS",
-      "ltp": 617.5,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 622.3499755859375,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "CORDSCABLE.NS": {
       "ticker": "CORDSCABLE.NS",
-      "ltp": 320.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 317.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "DATAPATTNS.NS": {
       "ticker": "DATAPATTNS.NS",
-      "ltp": 4248.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 4316.7998046875,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "DCBBANK.NS": {
       "ticker": "DCBBANK.NS",
-      "ltp": 200.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 197.74000549316406,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "DECNGOLD.NS": {
       "ticker": "DECNGOLD.NS",
-      "ltp": 195.1,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 199.35000610351562,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "DELHIVERY.NS": {
       "ticker": "DELHIVERY.NS",
-      "ltp": 400.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 408.1499938964844,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "DLINKINDIA.NS": {
       "ticker": "DLINKINDIA.NS",
-      "ltp": 405.25,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 420.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "DSSL.NS": {
       "ticker": "DSSL.NS",
-      "ltp": 945.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1013.0499877929688,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "DYNAMATECH.NS": {
       "ticker": "DYNAMATECH.NS",
-      "ltp": 13800.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 14284.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "E2E.NS": {
       "ticker": "E2E.NS",
-      "ltp": 650.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 688.9000244140625,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "ENDURANCE.NS": {
       "ticker": "ENDURANCE.NS",
-      "ltp": 2596.4,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 2512.800048828125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "ENTERO.NS": {
       "ticker": "ENTERO.NS",
-      "ltp": 1675.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1720.4000244140625,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "EUROPRATIK.NS": {
       "ticker": "EUROPRATIK.NS",
-      "ltp": 191.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 179.92999267578125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "FACT.NS": {
       "ticker": "FACT.NS",
-      "ltp": 738.15,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 761.5,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "FIEMIND.NS": {
       "ticker": "FIEMIND.NS",
-      "ltp": 1794.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1783.5,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "FORCEMOT.NS": {
       "ticker": "FORCEMOT.NS",
-      "ltp": 16800.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 17033.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "GESHIP.NS": {
       "ticker": "GESHIP.NS",
-      "ltp": 1529.9,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1532.199951171875,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "GMBREW.NS": {
       "ticker": "GMBREW.NS",
-      "ltp": 957.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 983.3499755859375,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "GOLDIAM.NS": {
       "ticker": "GOLDIAM.NS",
-      "ltp": 311.45,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 318.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "GRAVITA.NS": {
       "ticker": "GRAVITA.NS",
-      "ltp": 1413.1,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1499.199951171875,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "GRWRHITECH.NS": {
       "ticker": "GRWRHITECH.NS",
-      "ltp": 6877.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 7080.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "HBLENGINE.NS": {
       "ticker": "HBLENGINE.NS",
-      "ltp": 778.05,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 764.2000122070312,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "HIRECT.NS": {
       "ticker": "HIRECT.NS",
-      "ltp": 1116.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1145.300048828125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "INDOTECH.NS": {
       "ticker": "INDOTECH.NS",
-      "ltp": 3347.6,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 3345.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "INFOBEAN.NS": {
       "ticker": "INFOBEAN.NS",
-      "ltp": 143.5,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 149.10000610351562,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "IPCALAB.NS": {
       "ticker": "IPCALAB.NS",
-      "ltp": 1945.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1945.199951171875,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "JAGSNPHARM.NS": {
       "ticker": "JAGSNPHARM.NS",
-      "ltp": 232.49,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 234.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "JAMNAAUTO.NS": {
       "ticker": "JAMNAAUTO.NS",
-      "ltp": 131.45,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 145.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "JSFB.NS": {
       "ticker": "JSFB.NS",
-      "ltp": 483.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 499.95001220703125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "KAJARIACER.NS": {
       "ticker": "KAJARIACER.NS",
-      "ltp": 1230.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1209.699951171875,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "KIRLOSBROS.NS": {
       "ticker": "KIRLOSBROS.NS",
-      "ltp": 1777.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1742.9000244140625,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "KMEW.NS": {
       "ticker": "KMEW.NS",
-      "ltp": 2945.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 3188.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "KRISHANA.NS": {
       "ticker": "KRISHANA.NS",
-      "ltp": 183.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 193.3300018310547,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "KRN.NS": {
       "ticker": "KRN.NS",
-      "ltp": 1417.4,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1462.300048828125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "KSHINTL.NS": {
       "ticker": "KSHINTL.NS",
-      "ltp": 1029.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1031.0999755859375,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "LIQUIDBEES.NS": {
       "ticker": "LIQUIDBEES.NS",
-      "ltp": 1000.01,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1000.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "MACPOWER.NS": {
       "ticker": "MACPOWER.NS",
-      "ltp": 2130.5,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 2090.10009765625,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "MANORAMA.NS": {
       "ticker": "MANORAMA.NS",
-      "ltp": 1890.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1987.5,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "MARKSANS.NS": {
       "ticker": "MARKSANS.NS",
-      "ltp": 323.05,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 325.20001220703125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "MMFL.NS": {
       "ticker": "MMFL.NS",
-      "ltp": 569.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 578.5,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "MUTHOOTMF.NS": {
       "ticker": "MUTHOOTMF.NS",
-      "ltp": 174.4,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 176.6699981689453,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "NILE.NS": {
       "ticker": "NILE.NS",
-      "ltp": 1240.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1239.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "NUVAMA.NS": {
       "ticker": "NUVAMA.NS",
-      "ltp": 1686.3,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1841.4000244140625,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "ONEPOINT.NS": {
       "ticker": "ONEPOINT.NS",
-      "ltp": 74.2,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 79.01000213623047,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "PARAS.NS": {
       "ticker": "PARAS.NS",
-      "ltp": 1278.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1329.800048828125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "PASUPTAC.NS": {
       "ticker": "PASUPTAC.NS",
-      "ltp": 69.06,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 71.1500015258789,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "PITTIENG.NS": {
       "ticker": "PITTIENG.NS",
-      "ltp": 1125.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1121.800048828125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "PIXTRANS.NS": {
       "ticker": "PIXTRANS.NS",
-      "ltp": 1774.8,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1789.800048828125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "POCL.NS": {
       "ticker": "POCL.NS",
-      "ltp": 435.5,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 446.8999938964844,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "PRADPME.NS": {
       "ticker": "PRADPME.NS",
-      "ltp": 446.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 542.9000244140625,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "PREMIERPOL.NS": {
       "ticker": "PREMIERPOL.NS",
-      "ltp": 91.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 97.6500015258789,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "PRICOLLTD.NS": {
       "ticker": "PRICOLLTD.NS",
-      "ltp": 739.9,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 677.7999877929688,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "PRIVISCL.NS": {
       "ticker": "PRIVISCL.NS",
-      "ltp": 3565.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 3517.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "QPOWER.NS": {
       "ticker": "QPOWER.NS",
-      "ltp": 1555.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1643.699951171875,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "REDINGTON.NS": {
       "ticker": "REDINGTON.NS",
-      "ltp": 398.2,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 405.70001220703125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "RICOAUTO.NS": {
       "ticker": "RICOAUTO.NS",
-      "ltp": 121.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 122.05000305175781,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "RKFORGE.NS": {
       "ticker": "RKFORGE.NS",
-      "ltp": 694.5,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 732.0499877929688,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "SAPPL.BO": {
       "ticker": "SAPPL.BO",
-      "ltp": 310.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 312.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "SENCO.NS": {
       "ticker": "SENCO.NS",
-      "ltp": 317.15,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 319.1000061035156,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "SGFIN.NS": {
       "ticker": "SGFIN.NS",
-      "ltp": 631.9,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 662.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "SHANTIGOLD.NS": {
       "ticker": "SHANTIGOLD.NS",
-      "ltp": 306.4,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 336.45001220703125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "SHYAMMETL.NS": {
       "ticker": "SHYAMMETL.NS",
-      "ltp": 1047.2,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1053.800048828125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "SIYSIL.NS": {
       "ticker": "SIYSIL.NS",
-      "ltp": 537.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 553.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "SOBHA.NS": {
       "ticker": "SOBHA.NS",
-      "ltp": 1210.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1197.9000244140625,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "STEELCAS.NS": {
       "ticker": "STEELCAS.NS",
-      "ltp": 355.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 369.04998779296875,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "STLTECH.NS": {
       "ticker": "STLTECH.NS",
-      "ltp": 955.35,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1015.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "SUDEEPPHRM.NS": {
       "ticker": "SUDEEPPHRM.NS",
-      "ltp": 1205.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1158.199951171875,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "TALBROSENG.BO": {
       "ticker": "TALBROSENG.BO",
-      "ltp": 657.2,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 662.9500122070312,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "TANLA.NS": {
       "ticker": "TANLA.NS",
-      "ltp": 487.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 492.70001220703125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "TATVA.NS": {
       "ticker": "TATVA.NS",
-      "ltp": 1750.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1886.199951171875,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "THYROCARE.NS": {
       "ticker": "THYROCARE.NS",
-      "ltp": 531.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 529.75,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "TIPSMUSIC.NS": {
       "ticker": "TIPSMUSIC.NS",
-      "ltp": 646.8,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 654.0,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "UNIVCABLES.NS": {
       "ticker": "UNIVCABLES.NS",
-      "ltp": 1432.3,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1654.300048828125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "VENUSREM.NS": {
       "ticker": "VENUSREM.NS",
-      "ltp": 1805.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1768.300048828125,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "VIMTALABS.NS": {
       "ticker": "VIMTALABS.NS",
-      "ltp": 590.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 579.5,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "VIYASH.NS": {
       "ticker": "VIYASH.NS",
-      "ltp": 232.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 233.27999877929688,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "VSSL.NS": {
       "ticker": "VSSL.NS",
-      "ltp": 382.7,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 389.25,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "VTL.NS": {
       "ticker": "VTL.NS",
-      "ltp": 530.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 551.6500244140625,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "WANBURY.NS": {
       "ticker": "WANBURY.NS",
-      "ltp": 196.9,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 196.9499969482422,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     },
     "YATHARTH.NS": {
       "ticker": "YATHARTH.NS",
-      "ltp": 1035.0,
-      "asOf": "2026-10-02T09:31:56.525448+00:00",
+      "ltp": 1063.0999755859375,
+      "asOf": "2026-10-06T09:56:07.093980+00:00",
       "source": "yfinance"
     }
   }
